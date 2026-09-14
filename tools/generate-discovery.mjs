@@ -64,7 +64,7 @@ This catalog does not enable public budget access. Automated discovery must not 
 `;
 const home = `# SpentOn
 
-SpentOn is a comprehensive envelope budgeting app with an open-source self-hosted release in preparation. Plan spending, track subscriptions, manage credit-card cash and split bills. SpentOn Cloud is in beta. This URL is the account sign-in and private budgeting app. Its public Markdown representation contains no account or budget data.
+SpentOn is a comprehensive envelope budgeting app with a free, open-source self-hosted beta. Plan spending, track subscriptions, manage credit-card cash and split bills. SpentOn Cloud is in beta. This URL is the account sign-in and private budgeting app. Its public Markdown representation contains no account or budget data.
 
 [Explore SpentOn](${origin}/) · [Open the app and sign in](${origin}/app) · [Privacy](${origin}/privacy) · [Authentication](${origin}/auth.md) · [API documentation](${origin}/api-docs.md)
 

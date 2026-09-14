@@ -5,7 +5,7 @@ import {Modal} from './ui';
 import LoadingState from './LoadingState';
 
 export type Offer = {amountMinor:number;currency:'USD';recurring:boolean;available:boolean;baseAmountMinor?:number;discount?:{label:string;duration:string;discountCycles?:number;baseAmountMinor?:number}|null};
-export type BillingStatus = {state:'trial'|'paid'|'coupon'|'expired'|'self-hosted';canEdit:boolean;disputeHold?:boolean;trialDays:number;trialEndsAt:string|null;accessEndsAt:string|null;daysRemaining:number;offers:Record<'monthly'|'annual',Offer>;checkout:{id:string;offer:'monthly'|'annual';state:string;providerStatus:string;cancelScheduled:boolean;discountTerms?:string|null}|null};
+export type BillingStatus = {state:'trial'|'paid'|'coupon'|'expired'|'self-hosted';canEdit:boolean;discountsEnabled?:boolean;disputeHold?:boolean;trialDays:number;trialEndsAt:string|null;accessEndsAt:string|null;daysRemaining:number;offers:Record<'monthly'|'annual',Offer>;checkout:{id:string;offer:'monthly'|'annual';state:string;providerStatus:string;cancelScheduled:boolean;discountTerms?:string|null}|null};
 export const accessLabel=(status:BillingStatus)=>status.state==='self-hosted'?'Connected to your server':status.disputeHold?'A payment dispute is being reviewed':status.state==='trial'?`${status.daysRemaining} ${status.daysRemaining===1?'day':'days'} left in your free trial`:status.state==='expired'?'Your budget is in view-only mode':status.state==='coupon'?'Access from your coupon':'Your paid access is active';
 type AccessProps={status:BillingStatus;user:CloudUser;onUpdate:(status:BillingStatus)=>void;onClose:()=>void};
 type AdminProps={onClose:()=>void;onReplay:()=>void;onTestBudget:(budget:CloudBudget)=>void};

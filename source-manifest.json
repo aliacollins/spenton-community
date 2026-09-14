@@ -3,7 +3,7 @@
   "version": 1,
   "preview": false,
   "dirty": false,
-  "sourceCommit": "b3b006a9ceabfd39abb75333b9254bfebaba6028",
+  "sourceCommit": "1fe5f26abe13590fdb14dfae9f1d9946d8dfbf8f",
   "files": [
     {
       "path": ".dockerignore",
@@ -51,7 +51,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "b32c7802168175aa76aba3a8b71d882895e69bd01728c8a7d725fb19cd8b8575"
+      "sha256": "46a99005c044e1e90711e0feb0a013a63555fd947d1f8bdfa6774df14721da89"
     },
     {
       "path": "ios/bridge/engine.ts",
@@ -491,31 +491,31 @@
     },
     {
       "path": "landing/index.html",
-      "sha256": "ddc6402ba32d7a59c4c02cb177bc65852859dd2b2dba3a5ba4e145bceebc4de9"
+      "sha256": "1177f323a6ea59c2a0176d2fbc6b5cf20ec8cdc7ddcd95ead067d9f8111419a4"
     },
     {
       "path": "learn/credit-card-payments/index.html",
-      "sha256": "111c54b4ff95c9124de85bbb7484324eefb0db19aec5ec13a3255c04c15d5dc4"
+      "sha256": "699a1939302ed53b3b569c5f7538f647930c34cfa084ce4ef52e24b6e740ed56"
     },
     {
       "path": "learn/envelope-budgeting/index.html",
-      "sha256": "008d54a54cc2b2b23687067c7fa4ed5c75263a503b793c9063816d437f27769d"
+      "sha256": "0804fabbbe39698f6d1265c02098eaf051774cfa959d1827070b62c16988a391"
     },
     {
       "path": "learn/index.html",
-      "sha256": "bbc446f123ed1e6120cf7bbb5bb12dd6a39c4de7a27cb9ab758be3e0fb3dd934"
+      "sha256": "5cb99403751440b22050d9d975ffa851bcae513c843cb1356e409abd95c04d1d"
     },
     {
       "path": "learn/self-hosting/index.html",
-      "sha256": "79afa2da7f7704e3d28c4d696d0963d6ad31a5d2d3433a7c30b74bc1d77eb834"
+      "sha256": "d1839407e125c833647a51724b6c14b8ea61fbcb6522f5e32db3836feeee87bf"
     },
     {
       "path": "learn/shared-expenses/index.html",
-      "sha256": "24bccd3769cd8f6d4da602c78228b65d68688572ed1f6971aeb223c05cd68a8a"
+      "sha256": "82bc19d3ee13e0093672157b037922ce5a786b5450e5bc4892eea72f0ecc8430"
     },
     {
       "path": "learn/try/index.html",
-      "sha256": "13576498a060b140d9005af980a24ef635802a997ed994beb06580efda09edd0"
+      "sha256": "8bd5b031055b86bfd21b4c506ee4225eed9ddccb9c62bf608210a1df40546f60"
     },
     {
       "path": "LICENSE",
@@ -947,7 +947,7 @@
     },
     {
       "path": "server/api.mjs",
-      "sha256": "c04a26213734be69f74cbc4e6ac3fa6b3dc951886044a33324e1c3de164a43e8"
+      "sha256": "4c11d0c06a60b1c5a5f0b5fa3f97e78268716ec6b0e84940d530fc08e828986c"
     },
     {
       "path": "server/auth.mjs",
@@ -1091,7 +1091,7 @@
     },
     {
       "path": "src/AccessPanel.tsx",
-      "sha256": "8cb07d722e6d1c94e604dcd2ed717fe87de1169e373b07558fc0af3461515b79"
+      "sha256": "64342ae91e5622ee25358a6f64f8e5b6569d581c1bfc6104099b08ae0e8b9daa"
     },
     {
       "path": "src/AccountPrivacy.tsx",
@@ -1435,7 +1435,7 @@
     },
     {
       "path": "src/LocalAccountSettings.tsx",
-      "sha256": "02883a566d5b725ab9ada84d344078822b373b20dfae1b1cd3560f733e0d8307"
+      "sha256": "489af9223332cd0973132f56f6ac5c8699e4298a8bc62279ef31d1f433b21e45"
     },
     {
       "path": "src/main.tsx",
@@ -1887,7 +1887,7 @@
     },
     {
       "path": "src/Workspace.tsx",
-      "sha256": "deea7d9cf159b579c07f6e454a3ef2a32d8cf9c78363e71dfa706c9f6058948b"
+      "sha256": "5d7ffd1dff77bc83d0b881295f232b851059c3f42441992cd031d47a335d659c"
     },
     {
       "path": "THIRD_PARTY_NOTICES.txt",
@@ -1903,7 +1903,7 @@
     },
     {
       "path": "tools/generate-discovery.mjs",
-      "sha256": "c564d39de73803af6b5878ea422fe7b0c491ca2a35cecff7062b673c37d9e30f"
+      "sha256": "e319e2529b43dd85478d1e4473db879cdc0a66256c90d33f857737d2abc2918e"
     },
     {
       "path": "tools/restore-database-backup.mjs",

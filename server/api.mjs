@@ -164,7 +164,7 @@ export function createBudgetServer({ dbPath, deployment = 'cloud', localAccounts
   const auth=authentication.auth;
   db.exec('CREATE TABLE IF NOT EXISTS oauth_flows (state_hash TEXT PRIMARY KEY,provider TEXT NOT NULL,user_id TEXT,session_id TEXT,popup_id TEXT NOT NULL,expires_at INTEGER NOT NULL) STRICT;');
   let billing;
-  const coupons = createCouponService(db, { ...couponOptions, accessBase: userId => billing ? Date.parse(billing.status(userId).accessEndsAt) : 0, monthlyOffers:()=>billing?billing.monthlyOffers():[] });
+  const coupons = createCouponService(db, { ...couponOptions, discountsEnabled:()=>billing?.capabilities().discountsEnabled===true, accessBase: userId => billing ? Date.parse(billing.status(userId).accessEndsAt) : 0, monthlyOffers:()=>billing?billing.monthlyOffers():[] });
   async function confirmOwnerPassword(userId, password) {
     if (typeof password !== 'string' || password.length < 12 || Buffer.byteLength(password) > 1024) fail(401, 'INVALID_CREDENTIALS', 'Password or verification code is incorrect.');
     const row = db.prepare("SELECT password FROM auth_accounts WHERE userId=? AND providerId='credential'").get(userId);

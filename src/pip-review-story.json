@@ -1,0 +1,254 @@
+[
+  {
+    "id": "v5-hello",
+    "narration": "[cheerfully] Oh, hello! I’m Pip. [softly] I’ll be your partner on Spent On. We’ll take this one little step at a time... together."
+  },
+  {
+    "id": "v6-step-1",
+    "narration": "[softly] Which currency do you use? Choose it here, then click Use, followed by your currency. We’ll use it for the example and your budget."
+  },
+  {
+    "id": "v6-step-2",
+    "narration": "[softly] When people used cash, they put money into envelopes for different needs. Before spending, they checked what was left. That’s envelope budgeting. Here’s an example with one thousand. Click the Everyday needs envelope to set aside seven hundred."
+  },
+  {
+    "id": "v6-step-3",
+    "narration": "[softly] There we go. Now click the Surprises envelope to keep the other three hundred for unexpected expenses."
+  },
+  {
+    "id": "v6-step-4",
+    "narration": "[softly] All one thousand has a purpose. Planned, not spent. Click See it in Spent On to see your digital envelopes."
+  },
+  {
+    "id": "v6-step-5",
+    "narration": "[softly] In Spent On, envelopes are categories. Set aside is what you planned. Spent is what you used. Left is what you can still spend. Click Plan your money to set up your budget. Or click Show a hundred purchase first for a quick example."
+  },
+  {
+    "id": "v6-step-6",
+    "narration": "[softly] Imagine a grocery purchase of one hundred. Click Everyday needs to record which category it belongs to."
+  },
+  {
+    "id": "v6-step-7",
+    "narration": "[softly] Now there’s six hundred left for everyday needs, and three hundred for surprises. Check Left before your next purchase. Click Set up my budget to make your own plan."
+  },
+  {
+    "id": "v6-step-8",
+    "narration": "[softly] Let’s make it yours. Give your budget a name, like My everyday budget. Then click Continue."
+  },
+  {
+    "id": "v6-step-9",
+    "narration": "[softly] An account tracks money in a bank account or cash wallet. Start with one. You can add your other accounts later. Enter a name, choose the account type, then click Continue."
+  },
+  {
+    "id": "v6-step-10",
+    "narration": "[softly] How much is in this account today? This is the money we’ll give a purpose. Enter the current balance, then click Choose categories. Zero is okay too."
+  },
+  {
+    "id": "v6-step-11",
+    "narration": "[softly] Your categories should fit your life. Keep the ones you need and uncheck the others. You can add more anytime. Click Plan your money when you’re ready."
+  },
+  {
+    "id": "v6-step-12",
+    "narration": "[softly] This is Plan your money. Set aside amounts for spending, bills, and savings until Available to plan reaches zero. Every unit has a purpose. You choose where it goes. Then click Review my budget."
+  },
+  {
+    "id": "v6-step-13",
+    "narration": "[softly] Here’s your plan. Check the account balance and what you’ve set aside. Tick the box when it looks right, then click Finish preview. This review page won’t save a real budget yet."
+  },
+  {
+    "id": "v6-step-14",
+    "narration": "[softly] Your plan is ready to review. Had any spending today? Click Something you spent today to see Add transaction. Or click I’ll explore on my own. You can always add transactions later."
+  },
+  {
+    "id": "v6-step-15",
+    "narration": "[softly] Add transaction is where you record spending. Choose the account, the category, and the amount. Save transaction records it. No purchase to add? Click I can add this later."
+  },
+  {
+    "id": "v6-step-16",
+    "narration": "[softly] A goal helps you save for something, like a holiday. Open a category to set one. Then use Plan your money to set the money aside. Click Got it to return."
+  },
+  {
+    "id": "v6-step-17",
+    "narration": "[softly] You’re ready to explore. This welcome is for your first budget. Your categories and accounts are where you’ll keep planning from here."
+  },
+  {
+    "id": "v6-step-18",
+    "narration": "[softly] A surprise at checkout? Maybe! But groceries belong in Everyday needs. Click that category instead."
+  },
+  {
+    "id": "v6-step-19",
+    "narration": "[softly] Take your time. When you’re ready, follow the short instruction beside me. Your step is waiting right here."
+  },
+  {
+    "id": "v6-step-20",
+    "narration": "[softly] A main category is a heading, like Home. A subcategory, like Repairs, sits beneath it. Enter both names, then click Add category."
+  },
+  {
+    "id": "v7-inr-2",
+    "step": 2,
+    "currency": "INR",
+    "narration": "[softly] When people used cash, they put money into envelopes for different needs. Before spending, they checked what was left. That’s envelope budgeting. Here’s an example with one thousand rupees. Click the Everyday needs envelope to set aside seven hundred rupees."
+  },
+  {
+    "id": "v7-inr-3",
+    "step": 3,
+    "currency": "INR",
+    "narration": "[softly] There we go. Seven hundred rupees for everyday needs. Now click the Surprises envelope to keep the other three hundred rupees for unexpected expenses."
+  },
+  {
+    "id": "v7-inr-4",
+    "step": 4,
+    "currency": "INR",
+    "narration": "[softly] All one thousand rupees has a purpose. Planned, not spent. Click See it in Spent On to see your digital envelopes."
+  },
+  {
+    "id": "v7-inr-5",
+    "step": 5,
+    "currency": "INR",
+    "narration": "[softly] In Spent On, envelopes are categories. Set aside is what you planned. Spent is what you used. Left is what you can still spend. Click Plan your money to set up your budget. Or click Show a hundred rupee purchase first for a quick example."
+  },
+  {
+    "id": "v7-inr-6",
+    "step": 6,
+    "currency": "INR",
+    "narration": "[softly] Imagine you spent a hundred rupees on groceries. Click Everyday needs to record which category it belongs to."
+  },
+  {
+    "id": "v7-inr-7",
+    "step": 7,
+    "currency": "INR",
+    "narration": "[softly] Now there’s six hundred rupees left for everyday needs, and three hundred rupees for surprises. Check Left before your next purchase. Click Set up my budget to make your own plan."
+  },
+  {
+    "id": "v7-inr-12",
+    "step": 12,
+    "currency": "INR",
+    "narration": "[softly] This is Plan your money. Set aside amounts for spending, bills, and savings until Available to plan reaches zero. Every rupee has a purpose. You choose where it goes. Then click Review my budget."
+  },
+  {
+    "id": "v7-usd-2",
+    "step": 2,
+    "currency": "USD",
+    "narration": "[softly] When people used cash, they put money into envelopes for different needs. Before spending, they checked what was left. That’s envelope budgeting. Here’s an example with one thousand dollars. Click the Everyday needs envelope to set aside seven hundred dollars."
+  },
+  {
+    "id": "v7-usd-3",
+    "step": 3,
+    "currency": "USD",
+    "narration": "[softly] There we go. Seven hundred dollars for everyday needs. Now click the Surprises envelope to keep the other three hundred dollars for unexpected expenses."
+  },
+  {
+    "id": "v7-usd-4",
+    "step": 4,
+    "currency": "USD",
+    "narration": "[softly] All one thousand dollars has a purpose. Planned, not spent. Click See it in Spent On to see your digital envelopes."
+  },
+  {
+    "id": "v7-usd-5",
+    "step": 5,
+    "currency": "USD",
+    "narration": "[softly] In Spent On, envelopes are categories. Set aside is what you planned. Spent is what you used. Left is what you can still spend. Click Plan your money to set up your budget. Or click Show a hundred dollar purchase first for a quick example."
+  },
+  {
+    "id": "v7-usd-6",
+    "step": 6,
+    "currency": "USD",
+    "narration": "[softly] Imagine you spent a hundred dollars on groceries. Click Everyday needs to record which category it belongs to."
+  },
+  {
+    "id": "v7-usd-7",
+    "step": 7,
+    "currency": "USD",
+    "narration": "[softly] Now there’s six hundred dollars left for everyday needs, and three hundred dollars for surprises. Check Left before your next purchase. Click Set up my budget to make your own plan."
+  },
+  {
+    "id": "v7-usd-12",
+    "step": 12,
+    "currency": "USD",
+    "narration": "[softly] This is Plan your money. Set aside amounts for spending, bills, and savings until Available to plan reaches zero. Every dollar has a purpose. You choose where it goes. Then click Review my budget."
+  },
+  {
+    "id": "v7-eur-2",
+    "step": 2,
+    "currency": "EUR",
+    "narration": "[softly] When people used cash, they put money into envelopes for different needs. Before spending, they checked what was left. That’s envelope budgeting. Here’s an example with one thousand euros. Click the Everyday needs envelope to set aside seven hundred euros."
+  },
+  {
+    "id": "v7-eur-3",
+    "step": 3,
+    "currency": "EUR",
+    "narration": "[softly] There we go. Seven hundred euros for everyday needs. Now click the Surprises envelope to keep the other three hundred euros for unexpected expenses."
+  },
+  {
+    "id": "v7-eur-4",
+    "step": 4,
+    "currency": "EUR",
+    "narration": "[softly] All one thousand euros has a purpose. Planned, not spent. Click See it in Spent On to see your digital envelopes."
+  },
+  {
+    "id": "v7-eur-5",
+    "step": 5,
+    "currency": "EUR",
+    "narration": "[softly] In Spent On, envelopes are categories. Set aside is what you planned. Spent is what you used. Left is what you can still spend. Click Plan your money to set up your budget. Or click Show a hundred euro purchase first for a quick example."
+  },
+  {
+    "id": "v7-eur-6",
+    "step": 6,
+    "currency": "EUR",
+    "narration": "[softly] Imagine you spent a hundred euros on groceries. Click Everyday needs to record which category it belongs to."
+  },
+  {
+    "id": "v7-eur-7",
+    "step": 7,
+    "currency": "EUR",
+    "narration": "[softly] Now there’s six hundred euros left for everyday needs, and three hundred euros for surprises. Check Left before your next purchase. Click Set up my budget to make your own plan."
+  },
+  {
+    "id": "v7-eur-12",
+    "step": 12,
+    "currency": "EUR",
+    "narration": "[softly] This is Plan your money. Set aside amounts for spending, bills, and savings until Available to plan reaches zero. Every euro has a purpose. You choose where it goes. Then click Review my budget."
+  },
+  {
+    "id": "v7-gbp-2",
+    "step": 2,
+    "currency": "GBP",
+    "narration": "[softly] When people used cash, they put money into envelopes for different needs. Before spending, they checked what was left. That’s envelope budgeting. Here’s an example with one thousand pounds. Click the Everyday needs envelope to set aside seven hundred pounds."
+  },
+  {
+    "id": "v7-gbp-3",
+    "step": 3,
+    "currency": "GBP",
+    "narration": "[softly] There we go. Seven hundred pounds for everyday needs. Now click the Surprises envelope to keep the other three hundred pounds for unexpected expenses."
+  },
+  {
+    "id": "v7-gbp-4",
+    "step": 4,
+    "currency": "GBP",
+    "narration": "[softly] All one thousand pounds has a purpose. Planned, not spent. Click See it in Spent On to see your digital envelopes."
+  },
+  {
+    "id": "v7-gbp-5",
+    "step": 5,
+    "currency": "GBP",
+    "narration": "[softly] In Spent On, envelopes are categories. Set aside is what you planned. Spent is what you used. Left is what you can still spend. Click Plan your money to set up your budget. Or click Show a hundred pound purchase first for a quick example."
+  },
+  {
+    "id": "v7-gbp-6",
+    "step": 6,
+    "currency": "GBP",
+    "narration": "[softly] Imagine you spent a hundred pounds on groceries. Click Everyday needs to record which category it belongs to."
+  },
+  {
+    "id": "v7-gbp-7",
+    "step": 7,
+    "currency": "GBP",
+    "narration": "[softly] Now there’s six hundred pounds left for everyday needs, and three hundred pounds for surprises. Check Left before your next purchase. Click Set up my budget to make your own plan."
+  },
+  {
+    "id": "v7-gbp-12",
+    "step": 12,
+    "currency": "GBP",
+    "narration": "[softly] This is Plan your money. Set aside amounts for spending, bills, and savings until Available to plan reaches zero. Every pound has a purpose. You choose where it goes. Then click Review my budget."
+  }
+]

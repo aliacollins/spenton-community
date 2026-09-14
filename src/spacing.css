@@ -1,0 +1,33 @@
+/* Shared by the app and public website. Use the same scale at every breakpoint. */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --page-gutter: 32px;
+  --panel-inset: 24px;
+  --dialog-inset: 24px;
+  --section-gap: 24px;
+  --field-gap: 16px;
+  --control-height: 44px;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --page-gutter: 20px;
+    --panel-inset: 20px;
+    --dialog-inset: 20px;
+    --section-gap: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  :root { --page-gutter: 16px; --panel-inset: 16px; }
+}

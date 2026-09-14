@@ -1,0 +1,30 @@
+import './theme.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import CloudApp from './CloudApp';
+import {ConfirmationProvider} from './Confirmation';
+import InputFeedback from './InputFeedback';
+import Tooltips from './Tooltip';
+import './styles.css';
+import './spenton.css';
+import './ledger.css';
+import './sidebar.css';
+import './readability.css';
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><ConfirmationProvider><CloudApp/><InputFeedback/><Tooltips/></ConfirmationProvider></React.StrictMode>);
+import './setup.css';
+
+import './transactions.css';
+import './friendly-ui.css';
+
+import './auth-redesign.css';
+import './selects.css';
+import './layout-rhythm.css';
+import './interaction-care.css';
+import './system-appearance.css';
+import './pip-view.css';
+import './pip-surfaces.css';
+import './category-editor.css';
+import './visual-hierarchy.css';
+import './web-controls.css';
+import './people-clarity.css';
+import './compact-layout.css';

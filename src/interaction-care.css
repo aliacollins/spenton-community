@@ -1,0 +1,34 @@
+/* Shared web feedback. Financial content stays opaque; native glass is iOS-only. */
+button, a, input, select, textarea, summary { touch-action: manipulation; }
+:where(button, [role="button"], summary):not(:disabled):active { filter: brightness(.94); }
+:where(button, a, summary, input[type="checkbox"], input[type="radio"]):focus-visible {
+  outline: 2px solid #365c40;
+  outline-offset: 3px;
+}
+input[type="checkbox"], input[type="radio"] { accent-color: #365c40; }
+:where(button, input, select, textarea):disabled { cursor: not-allowed; }
+.modal :where(input, select, textarea, button) { scroll-margin-block: 24px; }
+@media (pointer: coarse) {
+  .modal :where(.button, .icon-button, .text-button, summary),
+  .spenton-select-trigger { min-height: 44px; }
+  .modal .icon-button { min-width: 44px; }
+  :where(label):has(> input[type="checkbox"], > input[type="radio"]) { min-height: 44px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .modal::backdrop { backdrop-filter: none; background: #17291fcc; }
+}
+@media (forced-colors: active) {
+  :where(button, a, summary, input[type="checkbox"], input[type="radio"]):focus-visible { outline-color: Highlight; }
+  :where(button, [role="button"], summary):active { filter: none; }
+}
+#root .button.danger{background:var(--spenton-danger-bg);color:var(--spenton-danger);border:1px solid var(--spenton-danger);border-radius:var(--spenton-control-radius)}
+#root .button.danger :is(span,strong,small,svg){color:inherit}
+#root .button.danger:hover:not(:disabled){background:color-mix(in srgb,var(--spenton-danger) 12%,var(--spenton-danger-bg))}
+#root .month-switcher{border:0;padding:0;margin:0;min-width:0}
+#root .app .month-switcher:disabled button{opacity:1;color:var(--spenton-quiet)}
+#root .toast{background:var(--spenton-popover);color:var(--spenton-ink);border:1px solid var(--spenton-control-border);box-shadow:var(--spenton-shadow)}
+#root .toast>span,#root .toast>.icon-button{color:inherit}
+#root .toast.info>svg{color:var(--spenton-info)}
+#root .toast.success>svg{color:var(--spenton-positive)}
+#root .toast.error{background:var(--spenton-danger-bg);color:var(--spenton-danger);border-color:var(--spenton-danger)}
+#root .app[data-app-view] .button.primary:disabled,#root .cloud-page .button.primary:disabled,#root .workspace-page .button.primary:disabled,#root .billing-dialog .button.primary:disabled,:root[data-spenton-view] #root .modal .button.primary:disabled{background:var(--spenton-raised);color:var(--spenton-quiet);border-color:var(--spenton-border);opacity:1}

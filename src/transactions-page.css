@@ -1,0 +1,171 @@
+/* Dense ledgers share columns; expanded detail never changes recorded money. */
+:root #root .app .transactions-dense{--tx-actions:132px;--tx-grid:104px minmax(130px,1fr) minmax(180px,1.65fr) minmax(145px,1.2fr) minmax(135px,auto) 88px var(--tx-actions);background:var(--spenton-surface);border:1px solid var(--spenton-border);border-radius:16px;padding:16px 20px;min-width:0;box-shadow:0 2px 8px #253d3104}
+:root #root .app .transactions-dense .transactions-toolbar{display:grid;grid-template-columns:minmax(200px,1fr) minmax(160px,190px) auto auto auto;align-items:center;gap:12px;padding:0;border:0;background:transparent}
+:root #root .app .transactions-dense .search-box{display:flex;align-items:center;gap:8px;min-width:0;min-height:44px;padding:0 12px;border:1px solid var(--spenton-control-border);border-radius:var(--spenton-control-radius);background:var(--spenton-field);color:var(--spenton-muted)}
+:root #root .app .transactions-dense .search-box input{width:100%;min-width:0;min-height:42px;padding:8px 0;border:0;background:transparent;box-shadow:none;font-size:13px;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .search-box:focus-within{outline:2px solid var(--spenton-focus);outline-offset:2px}
+:root #root .app .transactions-dense .search-box input:focus{outline:0;box-shadow:none}
+:root #root .app .transactions-dense .search-box .icon-button{flex:none;width:32px;height:32px;background:transparent;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transactions-toolbar>.spenton-select{width:100%;max-width:none;min-width:0}
+:root #root .app .transactions-dense .transactions-toolbar :is(.button,.spenton-select-trigger){min-height:44px;font-size:13px;padding:10px 12px;border-radius:var(--spenton-control-radius);white-space:nowrap}
+:root #root .app .transactions-dense .transactions-toolbar .selected-button{background:var(--spenton-selected);border-color:var(--spenton-focus);color:var(--spenton-ink)}
+:root #root .app .transactions-dense .transactions-toolbar :is(button,input):disabled{color:var(--spenton-quiet);opacity:1}
+:root #root .app .transactions-dense .transaction-filter-state{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 0 14px;border:0}
+:root #root .app .transactions-dense .transaction-filter-state>p{font-size:12px;line-height:1.6;color:var(--spenton-muted);margin:0}
+:root #root .app .transactions-dense .active-transaction-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:100%}
+:root #root .app .transactions-dense .active-transaction-filters>button{display:flex;align-items:center;gap:8px;min-height:32px;max-width:100%;padding:5px 8px;border:1px solid var(--spenton-border);border-radius:6px;background:var(--spenton-raised);color:var(--spenton-ink);font-size:12px;text-align:left}
+:root #root .app .transactions-dense .active-transaction-filters>button>span{min-width:0;overflow-wrap:anywhere}
+:root #root .app .transactions-dense .active-transaction-filters>.clear-all-filters{background:transparent;border-color:transparent}
+:root #root .app .transactions-dense .transaction-filter-help{font-size:12px;line-height:1.6;margin:0 0 12px;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-sections{display:grid;gap:24px;min-width:0}
+:root #root .app .transactions-dense .recorded-section{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:baseline;gap:0 16px;min-width:0;padding-top:0}
+:root #root .app .transactions-dense .recorded-heading{font-size:14px;font-weight:600;line-height:1.5;padding:0 0 10px;margin:0;background:transparent;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .transaction-edit-hint{font-size:11px;line-height:1.6;color:var(--spenton-muted);text-align:right;margin:0;padding:0 0 10px;border:0;background:transparent}
+:root #root .app .transactions-dense .recorded-section>:is(.transaction-list,.transaction-list-footer,.recorded-empty){grid-column:1/-1}
+:root #root .app .transactions-dense :is(.transaction-list,.scheduled-table){display:block;overflow-x:auto;min-width:0;background:var(--spenton-surface);border:0;border-radius:0}
+:root #root .app .transactions-dense :is(.transaction-columns,.transaction-row){display:grid;grid-template-columns:var(--tx-grid);column-gap:12px;min-width:986px;padding:0 12px;align-items:center}
+:root #root .app .transactions-dense .transaction-columns{min-height:34px;border-block:1px solid var(--spenton-border);background:var(--spenton-surface);font-size:10px;letter-spacing:.04em;font-weight:650;color:var(--spenton-muted);text-transform:uppercase}
+:root #root .app .transactions-dense .transaction-columns>*{display:block;min-width:0}
+:root #root .app .transactions-dense .transaction-columns>:nth-child(4){padding-left:27px}
+:root #root .app .transactions-dense .transaction-columns>:nth-child(5){text-align:right}
+:root #root .app .transactions-dense .transaction-columns>:nth-child(6){text-align:center}
+:root #root .app .transactions-dense .transaction-columns>:last-child{text-align:right}
+:root #root .app .transactions-dense .transaction-row{min-height:44px;height:auto;border:0;border-bottom:1px solid var(--spenton-border);background:var(--spenton-surface);font-size:12px;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .transaction-row>*{min-width:0}
+:root #root .app .transactions-dense .transaction-row.is-expanded{background:var(--spenton-selected)}
+:root #root .app .transactions-dense :is(.transaction-date,.transaction-account){display:block;font-size:12px;line-height:1.5;color:var(--spenton-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+:root #root .app .transactions-dense .transaction-date{font-variant-numeric:tabular-nums}
+:root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee){display:flex;align-items:center;gap:8px;min-width:0}
+:root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee)>.text-button{display:flex;align-items:center;justify-content:flex-start;gap:6px;flex:1;min-width:0;min-height:32px;max-width:100%;padding:0;text-align:left;white-space:nowrap}
+:root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee)>.text-button>strong{display:block;font-size:13px;font-weight:550;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--spenton-ink)}
+:root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee)>.text-button>svg{flex:none;color:var(--spenton-muted);width:12px;height:12px;opacity:.6}
+:root #root .app .transactions-dense .transaction-kind-chip{display:block;max-width:96px;flex-shrink:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:2px 5px;border-radius:4px;background:var(--spenton-raised);color:var(--spenton-muted);font-size:10px;line-height:1.5}
+:root #root .app .transactions-dense .transaction-note-indicator{display:inline-flex;flex:none;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-category-cell{display:block;min-width:0}
+:root #root .app .transactions-dense :is(.transaction-category,.transaction-route){display:flex;align-items:center;gap:7px;font-size:12px;min-width:0;color:var(--spenton-muted)}
+:root #root .app .transactions-dense :is(.transaction-category,.transaction-route)>span:last-child{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;min-width:0}
+:root #root .app .transactions-dense .transaction-category>.category-icon{flex:none;width:20px;height:20px;border-radius:5px}
+:root #root .app .transactions-dense .transaction-route>svg{flex:none;width:20px;height:14px;color:var(--spenton-positive)}
+:root #root .app .transactions-dense .transaction-category-label{display:block;padding:0 0 0 27px;background:transparent;border:0;font-size:12px;color:var(--spenton-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+:root #root .app .transactions-dense .transaction-amount-cell{display:flex;align-items:center;justify-content:flex-end;min-width:0}
+:root #root .app .transactions-dense .transaction-amount{display:block;font-size:13px;font-weight:600;line-height:1.5;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .transaction-amount[data-movement=in]{color:var(--spenton-positive)}
+:root #root .app .transactions-dense :is(.transaction-status-cell,.scheduled-status-cell){display:flex;align-items:center;justify-content:center;min-width:0}
+:root #root .app .transactions-dense .clear-button{display:grid;place-items:center;width:28px;height:28px;min-height:28px;padding:0;border:1px solid var(--spenton-border);border-radius:6px;background:transparent;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .clear-button.cleared{background:var(--spenton-selected);border-color:var(--spenton-positive);color:var(--spenton-positive)}
+:root #root .app .transactions-dense .clear-button.mixed{background:var(--spenton-raised);border-color:var(--spenton-control-border)}
+:root #root .app .transactions-dense .transaction-no-cash{font-size:11px;line-height:1.5;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-row-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+:root #root .app .transactions-dense .transaction-details-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:32px;padding:4px 6px;font-size:12px;border:0;border-radius:6px;color:var(--spenton-ink);background:transparent}
+:root #root .app .transactions-dense .transaction-details-toggle[aria-expanded=true]>svg{transform:rotate(180deg)}
+:root #root .app .transactions-dense .delete-transaction{display:flex;width:28px;min-height:32px;height:32px;opacity:.7;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-list-footer{display:flex;justify-content:flex-end;gap:12px;padding:10px 0 0;border:0;border-radius:0;background:transparent;color:var(--spenton-muted);font-size:11px;line-height:1.6}
+:root #root .app .transactions-dense .transaction-detail-row{display:block;padding:20px 24px;background:var(--spenton-surface);border-bottom:1px solid var(--spenton-border);min-width:0}
+:root #root .app .transactions-dense .transaction-detail-row[hidden]{display:none}
+:root #root .app .transactions-dense .transaction-detail-row>[role=cell]{display:grid;gap:16px;min-width:0}
+:root #root .app .transactions-dense .transaction-detail-row header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+:root #root .app .transactions-dense .transaction-detail-row header span{font-size:12px;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-detail-row h3{font-size:18px;line-height:1.4;font-weight:600;margin:4px 0 0;overflow-wrap:anywhere}
+:root #root .app .transactions-dense .transaction-detail-row .text-button{font-size:12px;min-height:36px;justify-self:start}
+:root #root .app .transactions-dense .transaction-detail-row header .text-button{flex:none}
+:root #root .app .transactions-dense .transaction-detail-row header .text-button>svg{transform:rotate(180deg)}
+:root #root .app .transactions-dense .transaction-detail-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:16px 24px;margin:0}
+:root #root .app .transactions-dense .transaction-detail-facts>div{min-width:0}
+:root #root .app .transactions-dense .transaction-detail-facts dt{font-size:12px;line-height:1.5;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-detail-facts dd{font-size:14px;line-height:1.5;font-weight:550;font-variant-numeric:tabular-nums;margin:6px 0 0;overflow-wrap:anywhere}
+:root #root .app .transactions-dense .transaction-detail-splits{display:grid;gap:8px;max-width:500px;border-top:1px solid var(--spenton-border);padding-top:12px}
+:root #root .app .transactions-dense .transaction-detail-splits>div{display:flex;align-items:baseline;justify-content:space-between;gap:20px;font-size:13px}
+:root #root .app .transactions-dense .transaction-detail-note{display:grid;gap:6px;font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-detail-note strong{font-size:12px;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .transaction-clearing-details{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--spenton-border);padding-top:12px}
+:root #root .app .transactions-dense .transaction-clearing-details>p{flex-basis:100%;font-size:12px;line-height:1.6;margin:0;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-clearing-details .button{min-height:40px;font-size:12px;gap:8px;border-radius:var(--spenton-control-radius)}
+:root #root .app .transactions-dense .transaction-clearing-details .button>small{font-size:11px;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-detail-actions{display:flex;align-items:center;justify-content:space-between;gap:16px}
+:root #root .app .transactions-dense .transaction-detail-actions p{font-size:12px;color:var(--spenton-muted);margin:0}
+:root #root .app .transactions-dense .transaction-detail-actions .button{min-height:40px;font-size:12px;border-radius:var(--spenton-control-radius)}
+:root #root .app .transactions-dense .recorded-empty{display:grid;justify-items:start;gap:14px;padding:24px 0 32px;min-width:0}
+:root #root .app .transactions-dense .recorded-empty>svg{color:var(--spenton-muted)}
+:root #root .app .transactions-dense .recorded-empty h3{font-size:22px;line-height:1.4;margin:0;font-weight:600}
+:root #root .app .transactions-dense .recorded-empty p{font-size:14px;line-height:1.6;margin:0;max-width:58ch;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .transaction-empty-actions{display:flex;gap:12px;flex-wrap:wrap}
+:root #root .app .transactions-dense .scheduled-transactions{margin:0;padding:0;border:0;background:transparent;min-width:0}
+:root #root .app .transactions-dense .scheduled-heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:0;background:transparent}
+:root #root .app .transactions-dense .scheduled-heading h2{margin:0;font-size:14px;line-height:1.5;font-weight:600}
+:root #root .app .transactions-dense .scheduled-heading button{min-height:32px;color:var(--spenton-ink)}
+:root #root .app .transactions-dense .scheduled-count{min-width:20px;height:20px;padding:0 6px;border-radius:5px;font-size:11px;background:var(--spenton-raised);color:var(--spenton-ink)}
+:root #root .app .transactions-dense .scheduled-scope{font-size:11px;color:var(--spenton-muted);margin:0}
+:root #root .app .transactions-dense .scheduled-due-count{font-size:11px;background:var(--spenton-warning-bg);color:var(--spenton-warning);padding:4px 8px;margin-left:auto}
+:root #root .app .transactions-dense .scheduled-description{padding:4px 0 10px;margin:0;font-size:11px;line-height:1.6;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .scheduled-meta{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap;font-size:10px;color:var(--spenton-muted);padding-left:6px;border-left:1px solid var(--spenton-border)}
+:root #root .app .transactions-dense .scheduled-status{margin:0;padding:3px 5px;font-size:10px;line-height:1.5;white-space:nowrap;border-radius:4px;background:transparent;color:var(--spenton-muted)}
+:root #root .app .transactions-dense .status-overdue{background:var(--spenton-warning-bg);color:var(--spenton-warning)}
+:root #root .app .transactions-dense .status-today{background:var(--spenton-selected);color:var(--spenton-positive)}
+:root #root .app .transactions-dense .scheduled-actions{display:flex;grid-column:auto;align-items:center;justify-content:flex-end;gap:4px}
+:root #root .app .transactions-dense .scheduled-record{min-height:28px;padding:4px 8px;border:1px solid var(--spenton-border);border-radius:6px;background:var(--spenton-primary);color:var(--spenton-on-primary);font-size:11px;font-weight:600}
+:root #root .app .transactions-dense .scheduled-record:disabled{background:transparent;color:var(--spenton-muted);opacity:1}
+:root #root .app .transactions-dense .scheduled-actions>.icon-button{width:28px;height:32px;min-height:32px;opacity:.8;color:var(--spenton-muted);background:transparent}
+:root #root .app .transactions-dense .scheduled-account:before{content:none}
+@media(hover:hover){
+ :root #root .app .transactions-dense .transaction-row:hover:not(.is-expanded){background:var(--spenton-hover)}
+ :root #root .app .transactions-dense .transaction-row .text-button:hover>strong{text-decoration:underline;text-underline-offset:3px}
+ :root #root .app .transactions-dense :is(.transaction-details-toggle,.active-transaction-filters>button):hover:not(:disabled){background:var(--spenton-hover)}
+ :root #root .app .transactions-dense .delete-transaction:hover:not(:disabled),:root #root .app .transactions-dense .scheduled-actions>.icon-button:last-child:hover{background:var(--spenton-danger-bg);color:var(--spenton-danger);opacity:1}
+}
+@media(min-width:1400px){
+ :root #root .app .transactions-dense :is(.transaction-list,.scheduled-table){overflow:visible}
+ :root #root .app .transactions-dense .transaction-columns{position:sticky;top:0;z-index:3}
+}
+@media(max-width:1200px){
+ :root #root .app .transactions-dense .transactions-toolbar{grid-template-columns:minmax(0,1fr) auto auto auto}
+ :root #root .app .transactions-dense .search-box{grid-column:1/-1}
+}
+@media(max-width:760px){
+ :root #root .app .transactions-dense{padding:16px 12px}
+ :root #root .app .transactions-dense .transactions-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ :root #root .app .transactions-dense .transactions-toolbar>.spenton-select{min-width:0}
+ :root #root .app .transactions-dense .transactions-toolbar .button{white-space:normal;justify-content:center}
+ :root #root .app .transactions-dense .search-box input{font-size:16px}
+ :root #root .app .transactions-dense .transaction-filter-state{padding:12px 0;align-items:start}
+ :root #root .app .transactions-dense .active-transaction-filters>button{min-height:44px}
+ :root #root .app .transactions-dense .recorded-section{grid-template-columns:minmax(0,1fr)}
+ :root #root .app .transactions-dense .transaction-edit-hint{text-align:left}
+ :root #root .app .transactions-dense :is(.transaction-list,.scheduled-table){overflow:visible}
+ :root #root .app .transactions-dense .transaction-columns{display:grid;position:absolute;width:1px;height:1px;min-width:0;min-height:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;padding:0;border:0}
+ :root #root .app .transactions-dense .transaction-row{grid-template-columns:minmax(0,1fr) 44px 88px;column-gap:8px;row-gap:8px;min-width:0;min-height:0;padding:12px 0;align-items:center}
+ :root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee){grid-column:1/3;grid-row:1;flex-wrap:wrap;gap:4px 6px}
+ :root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee)>.text-button{flex:1 1 100%;min-height:28px}
+ :root #root .app .transactions-dense :is(.transaction-payee,.scheduled-payee)>.text-button>strong{white-space:normal;overflow-wrap:anywhere;font-size:13px}
+ :root #root .app .transactions-dense .transaction-amount-cell{grid-column:3;grid-row:1;max-width:none;align-self:start}
+ :root #root .app .transactions-dense .transaction-amount{font-size:13px;white-space:normal;overflow-wrap:anywhere;max-width:100%}
+ :root #root .app .transactions-dense .transaction-account{grid-column:1;grid-row:2;font-size:11px}
+ :root #root .app .transactions-dense .transaction-category-cell{grid-column:2/4;grid-row:2}
+ :root #root .app .transactions-dense .transaction-category,:root #root .app .transactions-dense .transaction-route,:root #root .app .transactions-dense .transaction-category-label{font-size:11px}
+ :root #root .app .transactions-dense .transaction-date{grid-column:1;grid-row:3;font-size:11px}
+ :root #root .app .transactions-dense .transaction-status-cell{grid-column:2;grid-row:3}
+ :root #root .app .transactions-dense .transaction-row-actions{grid-column:3;grid-row:3;gap:0}
+ :root #root .app .transactions-dense .transaction-details-toggle{width:44px;min-height:44px;padding:0}
+ :root #root .app .transactions-dense .transaction-details-toggle>span{display:none}
+ :root #root .app .transactions-dense .clear-button,:root #root .app .transactions-dense .delete-transaction{width:44px;min-height:44px;height:44px;opacity:1}
+ :root #root .app .transactions-dense .transaction-detail-row{padding:16px 8px}
+ :root #root .app .transactions-dense .transaction-detail-row header{align-items:start;gap:12px;flex-wrap:wrap}
+ :root #root .app .transactions-dense .transaction-detail-facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+ :root #root .app .transactions-dense .transaction-detail-actions{flex-wrap:wrap;gap:12px}
+ :root #root .app .transactions-dense .transaction-clearing-details .button{width:100%;min-height:44px;justify-content:space-between}
+ :root #root .app .transactions-dense .transaction-list-footer{font-size:11px;justify-content:start;text-align:left}
+ :root #root .app .transactions-dense .scheduled-heading{gap:8px}
+ :root #root .app .transactions-dense .scheduled-heading h2{flex-basis:100%}
+ :root #root .app .transactions-dense .scheduled-heading button{font-size:13px}
+ :root #root .app .transactions-dense .scheduled-description{padding-top:8px}
+ :root #root .app .transactions-dense .scheduled-meta{border-left:0;padding:0}
+ :root #root .app .transactions-dense .scheduled-status-cell{grid-column:2/4;grid-row:3;justify-content:flex-end}
+ :root #root .app .transactions-dense .scheduled-actions{grid-column:1/-1;grid-row:4;justify-self:end;gap:8px}
+ :root #root .app .transactions-dense .scheduled-actions>.icon-button{width:44px;height:44px;min-height:44px}
+ :root #root .app .transactions-dense .scheduled-record{min-height:44px;font-size:12px;padding:8px 12px}
+}
+@media(pointer:coarse) and (min-width:761px){
+ :root #root .app .transactions-dense{--tx-actions:156px}
+ :root #root .app .transactions-dense .transaction-row{min-height:48px}
+ :root #root .app .transactions-dense :is(.clear-button,.delete-transaction,.transaction-details-toggle,.scheduled-record,.scheduled-actions>.icon-button){min-height:44px;height:44px}
+ :root #root .app .transactions-dense :is(.clear-button,.delete-transaction,.scheduled-actions>.icon-button){width:44px}
+}

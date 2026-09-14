@@ -1,0 +1,62 @@
+/* The website uses one light appearance, including on devices in dark mode.
+   Components use semantic roles; page and editor surfaces stay white. */
+:root{
+ color-scheme:only light;
+ --spenton-page:#ffffff;
+ --spenton-canvas:#f2f5e9;
+ --spenton-chrome:#f0f0e7;
+ --spenton-surface:#ffffff;
+ --spenton-raised:#f0f0e7;
+ --spenton-popover:#ffffff;
+ --spenton-field:#ffffff;
+ --spenton-ink:#253d31;
+ --spenton-brand-accent:#a66545;
+ --spenton-muted:#626e62;
+ --spenton-quiet:#687468;
+ --spenton-border:#dce0d3;
+ --spenton-control-border:#899581;
+ --spenton-hover:#f0f4e7;
+ --spenton-selected:#e7efd7;
+ --spenton-focus:#557448;
+ --spenton-primary:#253d31;
+ --spenton-primary-hover:#365840;
+ --spenton-on-primary:#fffefa;
+ --spenton-positive:#476848;
+ --spenton-warning:#93591f;
+ --spenton-warning-bg:#fbf0dd;
+ --spenton-danger:#b52b36;
+ --spenton-danger-bg:#fdebed;
+ --spenton-info:#486880;
+ --spenton-info-bg:#e8f0f5;
+ --spenton-plot:#66865b;
+ --spenton-category-sage-bg:#edf1e4;
+ --spenton-category-sage-fg:#536d43;
+ --spenton-category-sand-bg:#f2ede2;
+ --spenton-category-sand-fg:#785f3a;
+ --spenton-category-blue-bg:#eaf0f0;
+ --spenton-category-blue-fg:#466b7a;
+ --spenton-category-butter-bg:#f6f1de;
+ --spenton-category-butter-fg:#756329;
+ --spenton-category-lavender-bg:#f0edf4;
+ --spenton-category-lavender-fg:#6e5887;
+ --spenton-category-peach-bg:#f7eee3;
+ --spenton-category-peach-fg:#825738;
+ --spenton-category-rose-bg:#f6eae6;
+ --spenton-category-rose-fg:#8c514d;
+ --spenton-shadow:0 16px 40px #253d3126;
+ --spenton-backdrop:#253d3180;
+ --spenton-control-radius:9px;
+ --spenton-panel-radius:14px;
+}
+@media(prefers-contrast:more){
+ :root{
+  --spenton-muted:#445043;
+  --spenton-quiet:#4c574b;
+  --spenton-border:#75816e;
+  --spenton-control-border:#5d6e54;
+  --spenton-focus:#36552b;
+ }
+}
+@media(prefers-reduced-transparency:reduce){
+ :root{--spenton-backdrop:#dce0d3}
+}

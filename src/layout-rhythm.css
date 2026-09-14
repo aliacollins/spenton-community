@@ -1,0 +1,204 @@
+@import './spacing.css';
+
+/* Equal section insets keep titles, fields and actions on the same edges.
+   Financial tables, date grids and compact inline editors retain their density. */
+.modal.modal-standard > .modal-header,
+.modal.transaction-create-modal > .modal-header,
+.modal.budget-setup-modal > .modal-header {
+  padding: var(--dialog-inset);
+  gap: var(--space-4);
+}
+.modal.modal-standard .form-body,
+.modal.transaction-create-modal .form-body,
+.modal.budget-setup-modal .form-body {
+  padding: var(--dialog-inset);
+  gap: var(--section-gap);
+}
+.modal.modal-standard .modal-footer,
+.modal.transaction-create-modal .modal-footer,
+.modal.budget-setup-modal .modal-footer {
+  padding: var(--space-4) var(--dialog-inset);
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.modal.modal-standard .modal-header h2 { margin-top: var(--space-2); }
+.modal.modal-standard .modal-header .icon-button { margin: 0; flex-shrink: 0; }
+.modal .field-row { gap: var(--field-gap); align-items: start; }
+.modal .field { gap: var(--space-2); }
+.modal .modal-footer > .button {
+  min-height: var(--control-height);
+  padding: var(--space-3) var(--space-5);
+  justify-content: center;
+}
+.modal .form-body > p + p { margin-top: 0; }
+.modal .form-body > :is(.hint,.form-error,.cloud-notice) { margin-block: 0; }
+.modal.transaction-create-modal .tx-type-choices {
+  padding: 0 var(--dialog-inset) var(--space-6);
+  gap: var(--space-2);
+}
+.modal.transaction-create-modal .form-body { padding-top: 0; }
+.tx-entry-fields, .goal-fields { gap: var(--section-gap); }
+.modal.goal-editor .goal-amounts, .modal.goal-editor .goal-timing { gap: var(--field-gap); }
+.modal.goal-editor .goal-fields .goal-timing-note,
+.modal.goal-editor .goal-fields .goal-save-note { margin-top: 0; }
+.plan-money-modal .plan-money-summary,
+.modal.goal-editor .goal-preview { padding: var(--panel-inset); }
+.modal .plan-money-groups { gap: var(--space-4); }
+
+/* Page headers and their content share one horizontal gutter. */
+.app .main-content { padding-inline: var(--page-gutter); padding-bottom: var(--space-10); }
+.app .topbar { padding-inline: var(--page-gutter); }
+.app .page-heading { gap: var(--space-6); margin-bottom: var(--section-gap); align-items: flex-start; }
+.app .page-heading p { margin-top: var(--space-2); }
+.app .heading-actions { gap: var(--space-3); flex-wrap: wrap; }
+.app .month-toolbar { margin-bottom: var(--section-gap); gap: var(--space-4); flex-wrap: wrap; }
+.app .month-tools { margin-left: auto; gap: var(--space-3); padding-right: 0; }
+.app .budget-layout, .app .budget-layout.with-detail { gap: var(--section-gap); }
+.app .context-card { padding: var(--panel-inset); }
+.app .detail-breakdown { gap: var(--space-4); }
+.app .category-detail > .button,
+.app .card-detail > .button { margin-top: var(--space-4); }
+.app .account-grid { gap: var(--section-gap); }
+.app .account-tile { padding: var(--panel-inset); }
+.app .account-tile > .button-row { gap: var(--space-3); flex-wrap: wrap; }
+.app .privacy-note { margin-top: var(--section-gap); padding: var(--panel-inset); }
+.app .transactions-toolbar { gap: var(--space-3); }
+.app .recorded-heading { margin-block: var(--section-gap) var(--space-4); }
+.app .insights-workspace { gap: var(--section-gap); }
+.app .insights-main-column, .app .insights-side-column { gap: var(--section-gap); }
+.app .insights-panel, .app .insights-redesign .money-review-lead { padding: var(--panel-inset); }
+.app .insights-panel > header { margin-bottom: var(--space-5); gap: var(--space-4); }
+.app .insights-redesign .review-comparison { margin-top: var(--section-gap); padding: var(--space-5); }
+.app .insights-redesign .money-review-lead p { margin-bottom: var(--space-6); }
+.app .insights-method { padding-block: var(--space-6); }
+
+/* The budget chooser and its access card line up as a single workspace. */
+.workspace-page { padding: var(--space-8) var(--page-gutter) var(--space-10); }
+.workspace-header { padding-bottom: var(--space-6); gap: var(--space-6); }
+.workspace-welcome { padding-block: var(--space-12) var(--space-8); }
+.workspace-welcome h1 { margin-block: var(--space-3); }
+.workspace-layout, .workspace-sidebar { gap: var(--section-gap); }
+.workspace-budgets, .workspace-plan { padding: var(--panel-inset); }
+.workspace-section-title { margin-bottom: var(--space-6); gap: var(--space-4); }
+.workspace-budget-list { gap: var(--space-4); }
+.workspace-budget { padding: var(--space-6); }
+.workspace-budget-top { margin-bottom: var(--space-4); gap: var(--space-3); }
+.workspace-budget-open { margin-top: var(--space-4); padding-top: var(--space-4); }
+.workspace-create { padding: var(--space-4); margin-top: var(--space-4); }
+.workspace-coupon-body { padding-top: var(--space-4); }
+.workspace-home-footer { margin-top: var(--space-8); }
+
+/* Account forms keep a clear gap between explanation, fields and actions. */
+.cloud-page:has(.auth-layout) { padding-inline: var(--page-gutter); }
+.auth-layout .auth-story, .auth-layout .auth-card { padding: var(--space-10); }
+.auth-form { gap: var(--space-4); }
+.auth-form .auth-heading { margin-bottom: var(--space-2); }
+.auth-form .auth-heading h1 { margin-block: var(--space-3); }
+.auth-form .field { gap: var(--space-2); }
+.auth-form .auth-submit { margin-top: var(--space-2); }
+.auth-story h2 { margin-block: var(--space-6) var(--space-4); }
+.auth-story .auth-story-footer { padding-top: var(--space-6); }
+.account-action {
+  width: min(560px, calc(100% - var(--page-gutter) * 2));
+  margin: var(--space-12) auto var(--space-8);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.account-action > :is(h1,p,a,form) { margin: 0; }
+.account-action form { gap: var(--space-4); }
+.account-action :is(.field > span,.check-label) { font-size: 13px; line-height: 1.5; }
+.account-action .field input { min-height: var(--control-height); font-size: 15px; }
+.account-action .button { min-height: var(--control-height); justify-content: center; }
+.account-settings .form-body.account-privacy { gap: var(--space-4); }
+.account-settings .account-privacy :is(.settings-profile,.settings-reminders,.settings-card,.budget-reset-notice) {
+  padding: var(--space-5);
+}
+.account-settings .account-privacy .budget-reset-notice { border: 1px solid #ded7c3; }
+.account-settings .settings-card-grid { gap: var(--space-4); }
+.account-settings .account-privacy h3 + p { margin-top: var(--space-2); }
+.account-settings .account-privacy p + p { margin-top: var(--space-3); }
+.account-settings .settings-security { gap: var(--space-3); }
+.account-settings .settings-card .settings-link { padding-top: var(--space-4); }
+.account-settings .settings-delete > div { padding: 0 var(--space-5) var(--space-5); }
+.account-settings .settings-delete summary { padding: var(--space-4) var(--space-5); }
+.verification-content { padding: var(--space-8); }
+.verification-content h1 { margin-block: var(--space-4); }
+.verification-content .verification-cta { margin-top: var(--space-6); }
+.verification-footer { padding: var(--space-5) var(--space-8); }
+
+/* Matching plan cards keep their calls to action on the same baseline. */
+.billing-dialog { padding: var(--space-6); }
+.billing-dialog .billing-panel { padding: var(--space-6); }
+.billing-dialog-header { margin-bottom: var(--space-6); }
+.billing-intro { gap: var(--space-4); }
+.billing-intro h2 { margin-block: var(--space-2) var(--space-3); }
+.billing-offers { gap: var(--space-4); margin-top: var(--space-6); }
+.billing-offer { padding: var(--panel-inset); display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.billing-offer :is(h3,p) { margin: 0; min-height: 0; }
+.billing-offer > .button { width: 100%; margin-top: auto; min-height: var(--control-height); }
+.billing-note { margin-top: var(--space-6); }
+.billing-setup { padding: var(--space-4); margin-top: var(--space-4); }
+.billing-purchase-consent { padding: var(--panel-inset); gap: var(--space-4); margin-block: var(--space-6); }
+
+/* Consistent administration cards, including support/reset forms. */
+.owner-topbar { padding-inline: var(--page-gutter); }
+.owner-content { padding: var(--space-8) var(--page-gutter) var(--space-12); }
+.owner-page-heading { align-items: flex-start; gap: var(--space-6); margin-bottom: var(--space-6); }
+.owner-page-heading h1 { margin-block: var(--space-2) var(--space-3); }
+.owner-stats { gap: var(--space-4); margin-bottom: var(--space-6); }
+.owner-stat { padding: var(--panel-inset); gap: var(--space-3); }
+.owner-content .owner-card { padding: var(--panel-inset); margin-bottom: var(--space-6); }
+.owner-content .owner-overview-grid { gap: var(--space-6); }
+.owner-card > h2, .owner-card-title { margin-bottom: var(--space-5); }
+.owner-card-title { align-items: flex-start; gap: var(--space-4); }
+.owner-card-title h2 { margin-bottom: 0; }
+.owner-card > h3 { margin: var(--space-6) 0 var(--space-3); }
+.owner-card > p { line-height: 1.65; }
+.owner-card > p + p { margin-top: var(--space-3); }
+.owner-content .owner-form { gap: var(--space-4); margin-top: var(--space-5); }
+.owner-form > fieldset { display: grid; gap: var(--space-4); }
+.owner-form > fieldset > p { margin: 0; }
+.owner-form .field-row { gap: var(--space-4); }
+.owner-card :is(.owner-check,.field > span) { line-height: 1.5; }
+.owner-card > :is(.owner-success,.form-error) { margin-top: var(--space-4); }
+.owner-card-foot { gap: var(--space-4); padding-top: var(--space-5); margin-top: var(--space-5); }
+.owner-form > .button { min-height: var(--control-height); }
+
+/* Public legal pages use a readable measure and a predictable section rhythm. */
+.privacy-page { padding: var(--space-12) var(--page-gutter); }
+.privacy-page h1 { margin-bottom: var(--space-4); }
+.privacy-page h2 { margin: var(--space-10) 0 var(--space-4); }
+.privacy-page p { margin: 0; line-height: 1.75; }
+.privacy-page p + p { margin-top: var(--space-4); }
+.privacy-page :is(table,ul,ol) { margin-block: var(--space-6); }
+.privacy-page .privacy-intro { margin-top: var(--space-6); padding: var(--panel-inset); }
+.privacy-links { gap: var(--space-4) var(--space-6); padding: var(--space-6) var(--page-gutter); }
+
+@media (max-width: 800px) {
+  .auth-layout .auth-story, .auth-layout .auth-card { padding: var(--space-6); }
+  .auth-story h2 { margin: 0; }
+}
+@media (max-width: 760px) {
+  .app .page-heading, .owner-page-heading { gap: var(--space-4); flex-wrap: wrap; }
+  .workspace-page { padding-top: var(--space-6); }
+  .workspace-page .workspace-header { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .workspace-page .workspace-account { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); width: 100%; max-width: none; flex-basis: 100%; gap: var(--space-2); }
+  .workspace-page .workspace-account > :is(.workspace-user-email,.workspace-user-avatar) { display: none; }
+  .workspace-page .workspace-account > button { margin: 0; padding: var(--space-2) 0; min-height: 36px; font-size: 12px; white-space: normal; text-align: center; justify-content: center; border-left: 0; }
+  .workspace-welcome { padding-top: var(--space-8); }
+  .workspace-budget { padding: var(--space-5); }
+  .account-action { padding: var(--panel-inset); margin-top: var(--space-8); gap: var(--space-5); }
+  .verification-content { padding: var(--space-6); }
+  .verification-footer { padding: var(--space-4) var(--space-6); }
+  .billing-dialog, .billing-dialog .billing-panel { padding: var(--space-4); }
+  .owner-content { padding-top: var(--space-6); }
+  .privacy-page { padding-top: var(--space-8); }
+}
+@media (max-width: 520px) {
+  .modal .modal-footer > .button { flex: 1 1 auto; }
+  .modal .modal-footer > :is(.settings-footer-note,.muted,.small) { flex-basis: 100%; }
+  .account-settings .account-privacy :is(.settings-profile,.settings-reminders,.settings-card,.budget-reset-notice) { padding: var(--space-4); }
+  .owner-card-foot { align-items: flex-start; flex-wrap: wrap; }
+}

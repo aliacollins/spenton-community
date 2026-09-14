@@ -1,0 +1,22 @@
+.mobile-screen-guidance{display:none}
+.app .main-content:focus{outline:none}
+@media(max-width:600px){
+ #root .app .mobile-screen-guidance{
+  display:grid;grid-template-columns:24px minmax(0,1fr);gap:var(--space-3);
+  padding:var(--space-4);margin-bottom:var(--space-6);border-radius:16px;
+  background:var(--spenton-raised);
+  border:1px solid var(--pip-line,var(--line));
+  color:var(--pip-ink,var(--ink));
+ }
+ #root .app .mobile-screen-guidance>svg{margin-top:2px;color:var(--spenton-positive)}
+ #root .app .mobile-screen-guidance h2{margin:0;font-size:14px;font-weight:650;line-height:1.5;color:var(--pip-ink,var(--ink))}
+ #root .app .mobile-screen-guidance p{margin:var(--space-2) 0;font-size:13px;line-height:1.6;color:var(--spenton-muted)}
+ #root .app .mobile-screen-guidance button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:var(--space-2) var(--space-4);border-radius:99px;font-size:12px;font-weight:600;
+  border:1px solid var(--pip-line,var(--line));background:var(--pip-panel,var(--surface,#fffefa));
+  color:var(--pip-ink,var(--ink));
+ }
+ #root .app .mobile-screen-guidance button:hover{background:var(--spenton-hover)}
+ #root .app .mobile-screen-guidance button:focus-visible{outline:2px solid var(--spenton-positive);outline-offset:3px}
+}

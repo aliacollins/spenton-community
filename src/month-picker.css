@@ -1,0 +1,32 @@
+.app .budget-month-trigger{display:inline-flex;align-items:center;gap:10px;padding:7px 10px;border:1px solid transparent;border-radius:9px;color:#344e37;font-size:15px;font-weight:700;white-space:nowrap}
+.app .budget-month-trigger:hover,.app .budget-month-trigger[aria-expanded=true]{background:#eaf0e1;border-color:#d7e1cc}
+.app .budget-month-trigger>svg{color:#7a8c6d;transition:transform .15s}.app .budget-month-trigger[aria-expanded=true]>svg{transform:rotate(180deg)}
+.app .budget-month-trigger:focus-visible{outline:2px solid #6f8e5c;outline-offset:2px}
+.budget-month-popover{position:fixed;inset:auto;margin:0;width:304px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:15px;border:1px solid #d8e2cd;border-radius:18px;background:#fffef8;color:#39523b;box-shadow:0 14px 40px #243d3028;font-family:inherit;box-sizing:border-box}
+.budget-month-popover::backdrop{background:transparent}
+.budget-month-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 9px;border-bottom:1px solid #e7ecdf;font-size:12px;font-weight:650;color:#728267}
+.budget-month-popover .month-picker-icon{display:grid;place-items:center;width:30px;height:30px;padding:0;border-radius:8px;background:transparent;color:#708462;border:0;cursor:pointer}
+.budget-month-popover .month-picker-icon:hover{background:#eef3e6;color:#36563c}.budget-month-popover .month-picker-icon:disabled{opacity:.35;cursor:default}
+.budget-month-year{display:flex;align-items:center;justify-content:space-between;padding:10px 0 8px}
+.budget-month-year input{width:82px;height:34px;padding:4px;border:1px solid transparent;border-radius:7px;background:transparent;text-align:center;font-family:inherit;font-size:18px;font-weight:750;color:#38563b}
+.budget-month-year input:hover{border-color:#d7e2cb}.budget-month-year input[aria-invalid=true]{border-color:#b77d61}
+.budget-month-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.budget-month-grid button{position:relative;min-height:43px;padding:9px 4px;border:1px solid transparent;border-radius:10px;background:#f6f7ef;color:#53684a;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.budget-month-grid button:hover{background:#e8efdc;border-color:#cfdec0}.budget-month-grid button[aria-pressed=true]{background:#315b43;color:#fffef8;border-color:#315b43}
+.budget-month-grid button>i{position:absolute;bottom:4px;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background:currentColor}
+.budget-month-grid button:disabled{opacity:.35;cursor:default}
+.budget-month-popover button:focus-visible,.budget-month-year input:focus-visible{outline:2px solid #8ba974;outline-offset:2px}
+.budget-month-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #e6ecdf;padding-top:12px;margin-top:13px}
+.budget-month-footer>span{font-size:10px;color:#829077}.budget-month-footer>button{border:0;background:transparent;color:#426642;font-family:inherit;font-size:11px;font-weight:700;padding:6px 0;cursor:pointer}
+.month-picker-error{margin:10px 0 0;color:#975536;font-size:11px}
+@media(max-width:600px){.app .budget-month-trigger{font-size:13px;padding:6px;gap:6px}}
+
+ .budget-month-popover{background:var(--spenton-popover);color:var(--spenton-ink);border-color:var(--spenton-control-border);box-shadow:var(--spenton-shadow)}
+ .budget-month-heading,.budget-month-footer,.budget-month-footer>span{color:var(--spenton-muted);border-color:var(--spenton-border)}
+ .budget-month-year input{color:var(--spenton-ink)}
+ .budget-month-grid button{background:var(--spenton-field);color:var(--spenton-ink)}
+ .budget-month-grid button:hover{background:var(--spenton-hover);border-color:var(--spenton-focus)}
+ .budget-month-grid button[aria-pressed=true]{background:var(--spenton-primary);color:var(--spenton-on-primary);border-color:var(--spenton-primary)}
+ .budget-month-popover .month-picker-icon,.budget-month-footer>button{color:var(--spenton-ink)}
+ .budget-month-popover .month-picker-icon:hover{background:var(--spenton-hover);color:var(--spenton-ink)}
+ .month-picker-error{color:var(--spenton-danger)}

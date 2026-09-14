@@ -1,0 +1,77 @@
+/* A friendly, focused transaction form. All rules stay within this dialog. */
+.modal.transaction-create-modal{width:760px;max-height:calc(100dvh - 40px);overflow:hidden;border:1px solid #e1e5d6;border-radius:24px;background:#fffef9}
+.transaction-create-modal[open]{display:flex;flex-direction:column}
+html:has(.transaction-create-modal[open]){overflow:hidden}
+.transaction-create-modal .modal-header{flex-shrink:0;padding:25px 30px 19px}
+.transaction-create-modal .modal-header h2{font-size:29px;line-height:1.25;letter-spacing:-.9px;color:#304b37;font-weight:700}
+.transaction-create-modal .modal-header .eyebrow{font-size:10px;letter-spacing:1.5px;color:#8c7053;margin-bottom:8px}
+.transaction-create-modal .modal-header .icon-button{width:34px;height:34px;background:#f1f3e9;border-radius:50%;margin:0;color:#617458}
+.tx-type-choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;padding:0 30px 20px;flex-shrink:0}
+.tx-type{display:flex;align-items:center;gap:9px;text-align:left;padding:12px 10px;border:1px solid #e0e5d7;border-radius:13px;min-width:0;background:#fffef9;color:#516049;transition:background .15s,border-color .15s}
+.tx-type strong{display:block;font-size:13px;font-weight:650;line-height:1.4;white-space:nowrap}
+.tx-type small{display:block;font-size:10px;color:#6e7865;line-height:1.5;margin-top:2px;white-space:nowrap}
+.tx-type-icon{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:11px;background:#f7e9db;color:#a76e45}
+.tx-type-income .tx-type-icon{background:#e5eddc;color:#60804d}.tx-type-transfer .tx-type-icon{background:#e2edf0;color:#4f7d8a}.tx-type-payment .tx-type-icon{background:#eee5f3;color:#8c6a9c}
+.tx-type[aria-pressed=true]{border-color:#a7b994;background:#edf3e4;box-shadow:0 0 0 1px #a7b994}
+.tx-type-expense[aria-pressed=true]{background:#fbf0e4;border-color:#cda57b;box-shadow:0 0 0 1px #cda57b}
+.tx-type-transfer[aria-pressed=true]{background:#ecf3f5;border-color:#8fb3bd;box-shadow:0 0 0 1px #8fb3bd}
+.tx-type-payment[aria-pressed=true]{background:#f4eef7;border-color:#b79bc7;box-shadow:0 0 0 1px #b79bc7}
+.tx-type:hover{filter:brightness(.98)}
+.transaction-create-modal>form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.transaction-create-modal .form-body{padding:0 30px 22px;overflow-y:auto;overscroll-behavior:contain;min-height:0;display:flex;flex-direction:column;gap:20px}
+.tx-amount-hero{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f5f0e5;border:1px solid #e9ddc9;border-radius:18px;padding:20px 24px;flex-shrink:0}
+.tx-income .tx-amount-hero{background:#edf4e7;border-color:#dbe5cc}.tx-transfer .tx-amount-hero{background:#edf4f4;border-color:#d9e5e7}.tx-payment .tx-amount-hero{background:#f3edf5;border-color:#e2d7e8}
+.transaction-create-modal .field{min-width:0;margin:0;gap:8px}
+.transaction-create-modal .field>span{font-size:13px;font-weight:650;color:#536048;line-height:1.4}
+.transaction-create-modal .field input:not([type=checkbox]),.transaction-create-modal .field select{width:100%;min-width:0;min-height:46px;font-size:15px;line-height:1.4;font-weight:450;color:#374d35;background:#fffefb;border:1px solid #cfd8c5;border-radius:10px;padding:11px 12px}
+.transaction-create-modal .field input::placeholder{color:#849078;font-weight:400}
+.transaction-create-modal .field>small{font-size:11px;line-height:1.5;color:#6f7a65}
+.transaction-create-modal .tx-amount-hero>.field{flex:1;gap:7px}
+.transaction-create-modal .tx-amount-input{background:transparent;border:0;border-radius:0;padding:0;gap:12px;box-shadow:none}
+.transaction-create-modal .tx-amount-input>span{font-size:12px;font-weight:700;color:#647356;background:#fffef8;border:1px solid #dfdfcd;padding:5px 8px;border-radius:7px}
+.transaction-create-modal .field .tx-amount-input>input{font-size:42px!important;letter-spacing:-1px;font-weight:650;line-height:1.2;min-height:55px;background:transparent;padding:0!important;color:#354c32;font-variant-numeric:tabular-nums}
+.transaction-create-modal .field .tx-amount-input>input::placeholder{color:#809171;font-weight:550}
+.tx-pip-note{display:flex;align-items:center;gap:9px;flex-shrink:0}.tx-pip-note img{width:85px;height:85px;object-fit:contain}.tx-pip-note>span{font-size:11px;line-height:1.6;color:#776d57;max-width:112px}
+.tx-entry-fields{display:grid;gap:17px}
+.transaction-create-modal .field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0;align-items:start}
+.transaction-create-modal .tx-account-date{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.transaction-create-modal .check-label{display:flex;align-items:center;gap:10px;font-size:13px;color:#4b6040;line-height:1.5}
+.transaction-create-modal .check-label input{width:17px;height:17px;accent-color:#5a7d46;flex-shrink:0;margin:0}
+.transaction-create-modal .check-label small{display:block;font-size:11px;line-height:1.5;color:#76816b;margin-top:3px}
+.tx-split-section{margin-top:-5px}.transaction-create-modal .split-editor{display:grid;gap:14px;margin-top:15px;padding:16px;border:1px solid #dce4d1;border-radius:12px;background:#f4f7ef}
+.transaction-create-modal .split-editor .field-row{gap:12px;align-items:end}.transaction-create-modal .split-editor button{font-size:12px}
+.transaction-create-modal .split-editor .muted{font-size:12px;color:#647455;margin:0}
+.tx-options{border:1px solid #e0e5d7;border-radius:12px;background:#fafbf5}
+.tx-options summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;padding:13px 15px;font-size:13px;font-weight:600;color:#536b43}
+.tx-options summary::-webkit-details-marker{display:none}.tx-options summary:before{content:'+';display:grid;place-items:center;width:20px;height:20px;border-radius:6px;background:#eaf0df;font-size:16px;font-weight:400}.tx-options[open] summary:before{content:'−'}
+.tx-options summary small{margin-left:auto;font-size:11px;font-weight:450;color:#748268}
+.tx-options-fields{display:grid;grid-template-columns:1fr 1.35fr;gap:16px;padding:3px 16px 16px}.tx-options-fields>.hint{grid-column:1/-1}
+.transaction-create-modal .tx-cleared{padding:0 2px;align-items:flex-start}.tx-cleared input{margin-top:2px!important}
+.transaction-create-modal .transaction-impact{border-radius:12px;padding:14px 16px;gap:8px;margin:0}
+.transaction-create-modal .transaction-impact>div{font-size:12px}.transaction-create-modal .transaction-impact p{font-size:12px}
+.transaction-create-modal .hint{margin:0;border-radius:12px}.transaction-create-modal .hint p{font-size:12px;line-height:1.65;color:#62764f}
+.transaction-create-modal .transaction-explanation{margin:0;border-radius:12px;padding:15px}.transaction-create-modal .transaction-explanation strong{font-size:13px}.transaction-create-modal .transaction-explanation p{font-size:12px;line-height:1.6}
+.transaction-create-modal .modal-footer{flex-shrink:0;border-top:1px solid #e2e7d8;background:#f8faf1;padding:17px 30px;gap:12px;border-radius:0 0 24px 24px}
+.transaction-create-modal .modal-footer .button{min-height:46px;font-size:14px;padding:11px 22px;border-radius:11px}
+.transaction-create-modal .modal-footer .primary{background:#365c40;box-shadow:0 3px 0 #294632}
+.transaction-create-modal .form-error{font-size:14px;margin:0;color:#974e32}
+@media(max-width:650px){
+ .modal.transaction-create-modal{max-height:calc(100dvh - 24px);border-radius:19px}
+ .transaction-create-modal .modal-header{padding:20px 20px 18px}.transaction-create-modal .modal-header h2{font-size:26px}
+ .tx-type-choices{gap:7px;padding:0 20px 18px}.tx-type{flex-direction:column;justify-content:center;gap:6px;padding:10px 4px;text-align:center}.tx-type strong{font-size:11px}.tx-type small{display:none}
+ .transaction-create-modal .form-body{padding:0 20px 20px;gap:18px}
+ .tx-amount-hero{padding:16px;gap:10px}.tx-pip-note img{width:65px;height:65px}.tx-pip-note>span{display:none}.tx-pip-note{gap:0}
+ .transaction-create-modal .field .tx-amount-input>input{font-size:36px!important}.transaction-create-modal .tx-amount-input{gap:8px}.transaction-create-modal .tx-amount-input>span{font-size:10px;padding:4px 5px}
+ .transaction-create-modal .field input:not([type=checkbox]),.transaction-create-modal .field select{font-size:16px}
+ .transaction-create-modal .field-row,.transaction-create-modal .tx-account-date{grid-template-columns:1fr;gap:17px}
+ .transaction-create-modal .split-editor .field-row{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px}
+ .tx-options-fields{grid-template-columns:1fr}
+ .transaction-create-modal .modal-footer{padding:15px 20px}.transaction-create-modal .modal-footer .primary{flex:1;justify-content:center}
+ .transaction-create-modal .modal-footer .button{padding:11px 16px}
+}
+@media(max-width:360px){.tx-pip-note{display:none}.tx-type-choices{padding-left:15px;padding-right:15px;gap:5px}.tx-type strong{font-size:10px}.transaction-create-modal .modal-header h2{font-size:24px}}
+.transaction-create-modal .tx-payee-category>.field:only-child{grid-column:1/-1}
+
+/* The prominent amount stays unboxed while typing. */
+.transaction-create-modal .tx-amount-input:focus-within{border:0;box-shadow:none;outline:none}
+.allocation-preview{padding:14px 16px;background:#f1f5e9;border-radius:12px;font-size:13px;line-height:1.6}.allocation-preview p{margin:0}.allocation-preview p+p{margin-top:8px}.moved-out-label{display:block;font-size:10px;font-weight:500;color:#82664b}.inline-plan:has(.moved-out-label){flex-wrap:wrap}.inline-plan .moved-out-label{width:100%;order:3}

@@ -1,0 +1,80 @@
+/* Content groups use aligned edges and dividers. Surfaces identify controls,
+   independent records or a situation requiring attention, not every number. */
+#root .app[data-app-view="pip"] .budget-ledger{--ledger-money-inset:8px}
+#root .app[data-app-view="pip"] .pip-category-cell{gap:var(--category-label-gap)}
+#root .app[data-app-view="pip"] .pip-category-cell>.category-icon{width:var(--category-icon-width);height:var(--category-icon-width);flex:0 0 var(--category-icon-width)}
+#root .app[data-app-view="pip"] .budget-ledger :is(.inline-plan,.ledger-available){padding-right:var(--ledger-money-inset);margin-right:calc(-1 * var(--ledger-money-inset));font-variant-numeric:tabular-nums}
+#root .app[data-app-view="pip"] .ledger-available:not(.negative-pill){background:transparent}
+#root .app[data-app-view="pip"] .budget-sharing-note{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:20px;padding:20px 0;margin-top:24px;border-block:1px solid var(--pip-line)}
+#root .app[data-app-view="pip"] .budget-sharing-note img{width:64px;height:64px;object-fit:contain}
+#root .app[data-app-view="pip"] .budget-sharing-copy{min-width:0}
+#root .app[data-app-view="pip"] .budget-sharing-copy>strong{font-size:16px;font-weight:600;line-height:1.5;color:var(--pip-ink)}
+#root .app[data-app-view="pip"] .budget-sharing-copy>p{margin:8px 0 0;font-size:13px;line-height:1.6;color:var(--pip-muted)}
+#root .app[data-app-view="pip"] .budget-sharing-note>.text-button{min-height:44px;font-size:13px;white-space:nowrap;gap:12px}
+#root .app[data-app-view="pip"] .budget-sharing-facts{display:flex;flex-wrap:wrap;gap:12px 24px;margin:12px 0 0;font-size:12px}
+#root .app[data-app-view="pip"] .budget-sharing-facts>div{display:flex;align-items:baseline;gap:8px}
+#root .app[data-app-view="pip"] .budget-sharing-facts dt{color:var(--pip-muted)}
+#root .app[data-app-view="pip"] .budget-sharing-facts dd{margin:0;color:var(--pip-ink);font-variant-numeric:tabular-nums}
+#root .app[data-app-view="pip"] .workspace-footer{margin-top:16px;min-height:32px;font-size:12px;color:var(--pip-muted)}
+#root .app[data-app-view="pip"] :is(.workspace-footer>span,.budget-table-footer>span){color:var(--pip-muted)}
+#root .app[data-app-view="pip"] .workspace-footer>.text-button{font-size:12px;min-height:32px}
+@media(min-width:1401px){
+ /* The ledger sets the row height. Details scroll within an equally tall
+    inspector instead of pushing the shared footer down by themselves. */
+ #root .app[data-app-view="pip"] .budget-layout.with-detail>.context-column{display:block;contain:size;height:100%;min-height:0;align-self:start;overflow:visible}
+ #root .app[data-app-view="pip"] .context-column>.category-detail{height:100%;max-height:100%;min-height:0;overflow-y:auto;scrollbar-gutter:stable;scrollbar-color:var(--spenton-control-border) transparent;scrollbar-width:thin}
+}
+
+/* Secondary explanations sit within the owning section, without another card. */
+:root[data-spenton-view="pip"] #root .app :is(.category-goal-empty,.category-target,.card-backing,.card-explanation,.no-statement,.review-comparison){background:transparent;border:0;border-top:1px solid var(--pip-line);border-radius:0;box-shadow:none;padding:20px 0}
+#root .app[data-app-view="pip"] .category-detail>.button-row{display:flex;flex-wrap:wrap;gap:8px 16px}
+#root .app[data-app-view="pip"] .category-detail>.button-row>.text-button{border:0;border-radius:0;padding:8px 0}
+#root .app[data-app-view="pip"] .category-goal-empty>.button{background:transparent;border:0;border-radius:0;padding:8px 0}
+:root[data-spenton-view="pip"] #root .app .card-guidance.funded{background:transparent;border:0;border-top:1px solid var(--pip-line);border-radius:0;padding:16px 0}
+#root .app[data-app-view="pip"] :is(.account-overview,.insight-summary){background:transparent;border-inline:0;border-radius:0;box-shadow:none}
+:root[data-spenton-view="pip"] #root .app .insights-timeline-empty{background:transparent;border-top:1px solid var(--pip-line);border-radius:0;padding-inline:0}
+#root .app[data-app-view="pip"] .payment-reserves{background:transparent;border:0;border-top:1px solid var(--pip-line);border-radius:0;padding:20px 16px}
+#root .app[data-app-view="pip"] .shared-budget-preview{background:transparent;border-radius:0;border-block:1px solid var(--pip-line);padding:20px 0}
+#root .app[data-app-view="pip"] .pip-budget-perch{border:0}
+#root .app[data-app-view="pip"] .privacy-note{background:transparent;border:0;border-top:1px solid var(--pip-line);border-radius:0;padding:20px 0}
+
+/* Independent account groups must not stretch short records to a long card. */
+#root .app .account-grid.organized-accounts{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+#root .app .account-grid.organized-accounts.has-cards{grid-template-columns:minmax(0,2fr) minmax(280px,1fr)}
+#root .app .account-group{min-width:0}
+#root .app .account-group>h2{font-size:18px;font-weight:600;line-height:1.5;margin:0 0 16px;color:var(--ink)}
+#root .app .account-cash-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+#root .app .account-credit-grid{display:grid;gap:24px;align-items:start}
+#root .app .add-account-tile{min-height:180px}
+#root .app .add-account-tile>span{background:var(--pip-paper,var(--cream));color:var(--pip-green,var(--forest));border:1px solid var(--line)}
+#root .app .add-account-tile>span>svg{color:inherit}
+
+/* Shared account pages use one section boundary, not a card around each row. */
+#root .workspace-budget-list{gap:0}
+#root .workspace-budget:not(.workspace-budget-recent){background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none;margin-top:16px;padding-inline:0}
+#root .billing-offer{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding-inline:0}
+:root[data-spenton-view="pip"] #root .billing-offer{background:transparent;border:0;border-top:1px solid var(--pip-line);border-radius:0;padding-inline:0}
+#root .modal .category-goal-settings{background:transparent;border:0;border-top:1px solid var(--editor-line);border-radius:0}
+#root .modal .category-goal-settings>summary{padding-inline:0;border-radius:0}
+#root .modal .category-goal-settings[open]>summary{border-bottom:0;border-radius:0}
+#root .modal .category-goal-content{padding:8px 0 0}
+#root .modal .goal-fields .savings-goal-preview.goal-preview{background:transparent;border:0;border-block:1px solid var(--editor-line);border-radius:0;padding:20px 0}
+
+@media(hover:hover){
+ #root .app[data-app-view="pip"] .ledger-available:not(.negative-pill):hover{background:var(--pip-hover)}
+ #root .app[data-app-view="pip"] .category-goal-empty>.button:hover{background:transparent;text-decoration:underline;text-underline-offset:3px}
+}
+@media(max-width:760px){
+ #root .app[data-app-view="pip"] .budget-ledger{--ledger-money-inset:5px}
+ #root .app[data-app-view="pip"] .budget-sharing-note{grid-template-columns:48px minmax(0,1fr);gap:12px;padding:20px 8px}
+ #root .app[data-app-view="pip"] .budget-sharing-note img{width:48px;height:48px}
+ #root .app[data-app-view="pip"] .budget-sharing-note>.text-button{grid-column:2;justify-self:start;white-space:normal}
+ #root .app[data-app-view="pip"] .budget-sharing-copy>strong{font-size:14px}
+ #root .app[data-app-view="pip"] .budget-sharing-facts{display:grid}
+ #root .app[data-app-view="pip"] .budget-sharing-facts>div{flex-wrap:wrap}
+ #root .app .account-grid.organized-accounts.has-cards{grid-template-columns:minmax(0,1fr)}
+ #root .app .account-cash-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(min-width:761px) and (max-width:1100px){
+ #root .app .account-cash-grid{grid-template-columns:minmax(0,1fr)}
+}

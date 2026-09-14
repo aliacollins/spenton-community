@@ -1,0 +1,26 @@
+.self-hosting-guide .guide-main { max-width: var(--wrap); width: calc(100% - 96px); padding: 56px 0 88px; }
+.self-hosting-guide .guide-hero h1 { max-width: 760px; }
+.self-hosting-guide .guide-layout { grid-template-columns: minmax(0, 760px) minmax(220px, 1fr); gap: 64px; }
+.self-hosting-guide .guide-body > section { scroll-margin-top: 12px; }
+.self-hosting-guide code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86em; overflow-wrap: anywhere; }
+.self-hosting-guide pre { background: #f1f4ee; border: 1px solid var(--line); border-radius: 8px; padding: 20px; margin: 20px 0; overflow-x: auto; max-width: 100%; line-height: 1.8; }
+.self-hosting-guide pre code { overflow-wrap: normal; }
+.source-availability { background: #f3eee3; border-left: 3px solid #9d7048; padding: 20px 24px; margin-bottom: 24px; border-radius: 0 8px 8px 0; }
+.source-availability p { margin-top: 8px; color: var(--muted); }
+.setup-settings { margin-block: 24px; }
+.setup-settings > div { padding-block: 18px; border-bottom: 1px solid var(--line); }
+.setup-settings dt { font-weight: 750; margin-bottom: 4px; }
+.setup-settings dd { color: var(--muted); }
+.self-hosting-guide .setup-toc { top: 112px; background: none; border: 0; border-left: 1px solid var(--line); border-radius: 0; padding: 4px 0 4px 28px; }
+.setup-toc nav { display: flex; flex-direction: column; margin-top: 16px; }
+.setup-toc nav a { padding-block: 8px; font-size: 13px; }
+.setup-toc a:hover { color: var(--orange); }
+.setup-help { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 24px; }
+.setup-help h2 { font-size: 18px; }
+.setup-help p + p { margin-top: 16px; }
+.setup-help a { text-decoration: underline; text-underline-offset: 3px; }
+.self-hosting-guide .guide-footer { max-width: var(--wrap); width: calc(100% - 96px); padding-inline: 0; }
+@media (max-width: 1150px) { .self-hosting-guide .guide-main, .self-hosting-guide .guide-footer { width: calc(100% - 80px); } .self-hosting-guide .guide-layout { gap: 40px; } }
+@media (max-width: 900px) { .self-hosting-guide .guide-layout { display: flex; flex-direction: column; align-items: stretch; } .self-hosting-guide .setup-toc { order: -1; width: 100%; border-left: 0; border-block: 1px solid var(--line); padding: 24px 0; } .setup-toc nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; } .setup-help { display: none; } }
+@media (max-width: 700px) { .self-hosting-guide .guide-main, .self-hosting-guide .guide-footer { width: calc(100% - 40px); } .self-hosting-guide .guide-main { padding-top: 32px; } .self-hosting-guide pre { padding: 16px; font-size: 12px; } .source-availability { padding: 16px 20px; } }
+@media (max-width: 360px) { .self-hosting-guide .guide-main, .self-hosting-guide .guide-footer { width: calc(100% - 32px); } }

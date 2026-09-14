@@ -1,0 +1,131 @@
+/* Pip's shared component surfaces use the website's single light palette. */
+
+ :root[data-spenton-view="pip"] {
+  --ink:var(--pip-ink);--muted:var(--pip-muted);--surface:var(--pip-panel);
+  --cream:var(--pip-soft);--paper:var(--pip-page);--line:var(--pip-line);
+  --pip-card:var(--spenton-raised);
+  --pip-shadow:var(--spenton-shadow);
+ }
+ :root[data-spenton-view="pip"] body{background:var(--pip-page);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] ::selection{background:var(--pip-primary);color:var(--pip-on-primary)}
+
+ /* App chrome, recorded activity and the category side panel. */
+ :root[data-spenton-view="pip"] #root .app .workspace-avatar{background:var(--pip-soft);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .space-menu-panel>button{background:transparent;color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .space-menu-panel>button:hover{background:var(--pip-soft)}
+ :root[data-spenton-view="pip"] #root .app .space-menu-panel :is(small,button small){color:var(--pip-muted)}
+ /* Preserve the priority of the global .negative amount state. */
+ :root[data-spenton-view="pip"] #root .negative{color:var(--pip-negative)!important}
+ :root[data-spenton-view="pip"] #root .app .sidebar-account small.negative{color:var(--pip-negative)!important}
+ :root[data-spenton-view="pip"] #root .app .sidebar-account:has(.account-dot.credit) small.negative{color:var(--pip-ink)!important}
+ :root[data-spenton-view="pip"] #root .app :is(kbd,.transaction-icon,.neutral-tag){background:var(--pip-paper);color:var(--pip-green);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app .transaction-icon>span{color:inherit}
+ :root[data-spenton-view="pip"] #root .app :is(.budget-history,.budget-history-row,.budget-history-equation,.card-activity,.reconciliation-history){border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app :is(.budget-history-explanation,.budget-history-card-context,.card-backing,.card-explanation,.no-statement,.investment-budget-note){background:var(--pip-paper);color:var(--pip-ink);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app :is(.budget-history-row-top,.budget-history-row-top time,.budget-history-row-top>span,.budget-history-toggle,.budget-history p,.budget-history dt,.budget-history-row>small,.budget-history-card-context li>small,.card-activity-summary span,.card-activity summary,.card-activity p,.investment-budget-note){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .app .budget-history-card-context :is(summary,time,li>span){color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .budget-history .history-in{color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .budget-history .history-out{color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .budget-history-card-context li{border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app .card-activity :is(th,td){border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .card-activity thead th{background:var(--pip-paper);color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .app .mini-credit-card{background:var(--pip-card);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .mini-credit-card :is(strong,span,small,svg){color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .mini-credit-card .mini-card-bottom{color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .app .add-account-tile{background:var(--pip-panel);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .app .add-account-tile:hover{background:var(--pip-paper)}
+ :root[data-spenton-view="pip"] #root .app .add-account-tile small{color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .app .card-guidance{background:var(--pip-peach);border-color:var(--pip-line);color:var(--pip-orange)}
+ :root[data-spenton-view="pip"] #root .app .card-guidance :is(span,strong,p){color:inherit}
+ :root[data-spenton-view="pip"] #root .app .card-guidance.funded{background:var(--pip-soft);color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .app :is(.insights-timeline-empty,.insights-empty-icon){background:var(--pip-paper);color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .app .insights-redesign :is(.spending-caption,.review-drivers button,.insights-goals>button){border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app .insights-timeline svg path[stroke]{stroke:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .app .insights-timeline svg circle[fill]{fill:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .app .insights-timeline svg line{stroke:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .app .insights-timeline svg text{fill:var(--pip-muted)}
+
+ /* Field wrappers, focus/hover states and portalled selection/calendar menus. */
+ :root[data-spenton-view="pip"] #root :is(.date-picker-field,.spenton-payee-control,.spenton-select-trigger){background:var(--pip-page);color:var(--pip-ink);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root :is(.date-picker-field,.spenton-payee-control):focus-within{background:var(--pip-page);border-color:var(--spenton-focus)}
+ :root[data-spenton-view="pip"] #root :is(.spenton-select-trigger:hover:not(:disabled),.spenton-select-trigger[aria-expanded=true]){background:var(--pip-paper);color:var(--pip-ink);border-color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .spenton-select-trigger:disabled{background:var(--pip-paper);color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root :is(.spenton-select-chevron,.spenton-payee-control>svg,.date-picker-trigger,.spenton-payee-browse){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root :is(.date-picker-trigger,.spenton-payee-browse):hover{background:var(--pip-soft)}
+ :root[data-spenton-view="pip"] :is(.spenton-payee-initial,.spenton-dropdown-heading>span){background:var(--pip-soft);color:var(--pip-green)}
+ :root[data-spenton-view="pip"] :is(.spenton-dropdown,.budget-month-popover,.date-picker-popover){background:var(--spenton-popover);color:var(--pip-ink);border-color:var(--pip-line);box-shadow:var(--pip-shadow)}
+ :root[data-spenton-view="pip"] :is(.spenton-dropdown-search,.spenton-dropdown-heading,.date-picker-heading,.date-picker-footer,.budget-month-heading,.budget-month-footer){color:var(--pip-muted);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] :is(.spenton-dropdown-search>input,.budget-month-year input,.date-picker-navigation>input){color:var(--pip-ink);background:transparent}
+ :root[data-spenton-view="pip"] :is(.spenton-option-group,.spenton-options-empty,.date-picker-week,.date-picker-heading span,.date-picker-footer>span,.budget-month-footer>span){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] :is(.spenton-dropdown-search>input,input,textarea)::placeholder{color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] .spenton-options{scrollbar-color:var(--pip-line) transparent}
+ :root[data-spenton-view="pip"] .spenton-option-check{color:var(--pip-green)}
+ :root[data-spenton-view="pip"] :is(.date-picker-heading>button,.date-picker-footer>button,.budget-month-grid button){background:var(--pip-paper);color:var(--pip-ink);border-color:transparent}
+ :root[data-spenton-view="pip"] :is(.date-picker-popover button:hover:not(:disabled),.budget-month-grid button:hover,.month-picker-icon:hover){background:var(--pip-soft);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] :is(.date-picker-grid button[aria-pressed=true],.date-picker-grid button[aria-pressed=true]:hover,.budget-month-grid button[aria-pressed=true]){background:var(--pip-primary);color:var(--pip-on-primary);border-color:var(--pip-primary);box-shadow:none}
+ :root[data-spenton-view="pip"] .date-picker-grid .outside-month{color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] .date-picker-footer i,:root[data-spenton-view="pip"] .date-picker-grid button[aria-current=date]::after{background:var(--pip-green)}
+ :root[data-spenton-view="pip"] .date-picker-grid button[aria-pressed=true]::after{background:var(--pip-on-primary)}
+ :root[data-spenton-view="pip"] :is(.budget-month-footer>button,.month-picker-icon){color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .app :is(.budget-month-trigger:hover,.budget-month-trigger[aria-expanded=true]){background:var(--pip-paper);border-color:var(--pip-line)}
+
+ /* Goals, batch planning, transfer forecasts and reconciliation. */
+ :root[data-spenton-view="pip"] #root .modal :is(.goal-kind button,.goal-timeline-choice,.plan-money-group-heading,.tx-options,.reconcile-summary,.drop-area,.split-editor,.opening-reserve,.budget-reset-scope,.budget-reset-kept){background:var(--pip-paper);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal :is(.goal-amount,.plan-money-row.has-amount,.transaction-impact,.transaction-impact-row,.allocation-source,.allocation-preview){background:var(--pip-soft);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal .goal-kind button[aria-pressed=true]{background:var(--pip-soft);border-color:var(--pip-green);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal [data-pip-motion-group]>button[aria-pressed=true]{background:transparent}
+ :root[data-spenton-view="pip"] #root .modal :is(.goal-kind small,.goal-preview>span,.goal-preview-facts small,.goal-timing-note,.goal-save-note,.goal-options,.plan-money-summary dt,.plan-money-tools p,.plan-money-category small,.plan-money-group-heading>span,.transaction-create-modal .field>small,.tx-type small,.tx-pip-note>span,.check-label small,.payee-helper,.drop-area>span){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .modal :is(.goal-label,.goal-preview-facts b,.goal-amount>span,.plan-money-category strong,.plan-money-summary dd,.transaction-impact strong,.transaction-impact-row strong,.reconcile-summary strong){color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal :is(.goal-options summary,.goal-timeline-choice button,.plan-money-tools button,.tx-options summary){color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .modal :is(.plan-money-row,.plan-money-summary dl,.reconcile-entry,.reconciliation-history,.split-summary,.setting-line){border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .modal :is(.plan-money-entry input:focus,.goal-amount>input){background:transparent;color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal :is(.transaction-impact,.allocation-preview) :is(span,p,small){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .modal :is(.plan-money-summary.over-budget,.transaction-impact.warning,.allocation-preview.warning){background:var(--pip-negative-bg);color:var(--pip-negative);border-color:var(--pip-negative)}
+ :root[data-spenton-view="pip"] #root .modal :is(.plan-money-summary.over-budget,.transaction-impact.warning,.allocation-preview.warning) :is(span,strong,small,dt,dd,p){color:var(--pip-negative)}
+
+ /* Transaction kinds and amount-entry surfaces use semantic colors. */
+ :root[data-spenton-view="pip"] #root .transaction-create-modal .tx-type{background:var(--pip-paper);border-color:var(--pip-line);color:var(--pip-ink);box-shadow:none}
+ :root[data-spenton-view="pip"] #root .transaction-create-modal .tx-type[aria-pressed=true]{background:var(--pip-soft);border-color:var(--pip-green);box-shadow:none}
+ :root[data-spenton-view="pip"] #root .transaction-create-modal .tx-amount-hero{background:var(--pip-paper);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .transaction-create-modal .tx-amount-input>span{background:var(--pip-soft);color:var(--pip-green);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .transaction-create-modal .tx-options summary::before{background:var(--pip-soft);color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .modal .hint p{color:var(--pip-muted)}
+
+ /* Reuse the same semantic palette inside People and group-specific dialogs. */
+ :root[data-spenton-view="pip"] #root :is(.people-workspace,.people-dialog) {
+  --people-bg:var(--pip-page);--people-surface:var(--pip-panel);--people-soft:var(--pip-paper);
+  --people-line:var(--pip-line);--people-ink:var(--pip-ink);--people-muted:var(--pip-muted);
+  --people-accent:var(--pip-green);--people-selected:var(--pip-soft);--people-warn:var(--pip-orange);
+ }
+ :root[data-spenton-view="pip"] #root :is(.expense-groups,.group-dialog) {
+  --group-ink:var(--pip-ink);--group-muted:var(--pip-muted);--group-line:var(--pip-line);
+  --group-surface:var(--pip-panel);--group-soft:var(--pip-paper);
+ }
+ :root[data-spenton-view="pip"] #root .repayment-track>i{background:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .repayment-track>i+i{background:repeating-linear-gradient(135deg,var(--pip-orange),var(--pip-orange) 3px,var(--pip-peach) 3px,var(--pip-peach) 6px)}
+ :root[data-spenton-view="pip"] #root .repayment-track>i.offset-segment{background:var(--spenton-info)}
+
+ /* Account/privacy and billing remain part of the same signed-in appearance. */
+ :root[data-spenton-view="pip"] #root :is(.billing-panel.cloud-card,.account-privacy,.onboarding-privacy,.budget-reset-card){background:var(--pip-panel);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root :is(.billing-offer,.billing-purchase-consent,.billing-cancel,.budget-reset-footer,.settings-delete,.settings-connections,.settings-reminders){background:var(--pip-paper);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root :is(.billing-setup,.settings-badge:not(.verified),.budget-reset-notice){background:var(--pip-peach);color:var(--pip-orange);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root :is(.billing-icon,.settings-icon,.settings-avatar,.settings-badge.verified,.budget-reset-icon){background:var(--pip-soft);color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root :is(.billing-panel,.account-privacy,.onboarding-privacy,.budget-reset-card) :is(h2,h3,strong,label){color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root :is(.billing-panel,.account-privacy,.onboarding-privacy,.budget-reset-card) :is(p,small,.cloud-eyebrow,.settings-caption,.settings-footer-note,.budget-reset-label){color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .billing-offer>span{color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root .billing-panel .billing-setup{color:var(--pip-orange)}
+ :root[data-spenton-view="pip"] #root :is(.settings-link,.settings-connections summary,.settings-delete summary,.account-privacy a,.billing-panel .text-button){color:var(--pip-green)}
+ :root[data-spenton-view="pip"] #root .billing-panel .button.primary{background:var(--pip-primary);color:var(--pip-on-primary);border-color:transparent}
+ :root[data-spenton-view="pip"] #root :is(.settings-delete,.settings-connections,.onboarding-privacy,.settings-card,.settings-profile){border-color:var(--pip-line)}
+
+ /* Error, success and focus states are readable without changing their behavior. */
+ :root[data-spenton-view="pip"] #root :is(.form-error,.spenton-select-error,.date-picker-error,.month-picker-error,.plan-money-entry>small,.inline-plan-draft>[role=alert]){color:var(--pip-negative)}
+ :root[data-spenton-view="pip"] #root :is(.form-error,.sync-banner){background:var(--pip-negative-bg);border-color:var(--pip-negative)}
+ :root[data-spenton-view="pip"] #root :is(.warning-banner,.access-notice){background:var(--pip-peach);color:var(--pip-orange);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root :is(.warning-banner,.access-notice) :is(p,strong){color:inherit}
+ :root[data-spenton-view="pip"] #root :is(.cloud-notice,.email-notice){background:var(--pip-soft);color:var(--pip-ink);border-color:var(--pip-line)}
+ :root[data-spenton-view="pip"] #root .modal .button.secondary{background:var(--pip-panel);border-color:var(--pip-line);color:var(--pip-ink)}
+ :root[data-spenton-view="pip"] #root .modal .button.ghost{background:transparent;border-color:transparent;color:var(--pip-muted)}
+ :root[data-spenton-view="pip"] #root :is(.modal,.billing-panel) .button.primary :is(span,strong,small){color:inherit}
+ :root[data-spenton-view="pip"] :is(button,input,textarea,summary,a):focus-visible{outline-color:var(--spenton-focus)}
+ :root[data-spenton-view="pip"] #root .privacy-links a{color:var(--pip-muted)}

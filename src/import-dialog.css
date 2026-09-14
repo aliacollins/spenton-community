@@ -1,0 +1,10 @@
+#root .drop-area>strong,#root .import-row strong{font-size:14px;line-height:1.5}
+#root .drop-area>span,#root .import-summary small,#root .import-row small{font-size:12px;line-height:1.6}
+#root .import-summary strong{font-size:14px}
+#root .import-row>span{min-width:0;overflow-wrap:anywhere}
+
+ #root .drop-area,#root .import-summary{background:var(--spenton-raised);border-color:var(--spenton-control-border);color:var(--spenton-muted)}
+ #root .drop-area>strong,#root .import-summary strong,#root .import-row strong{color:var(--spenton-ink)}
+ #root .drop-area>span,#root .import-summary small,#root .import-row small{color:var(--spenton-muted)}
+ #root .import-row{border-color:var(--spenton-border);color:var(--spenton-ink)}
+ #root .import-row.invalid,#root .import-row.invalid :is(strong,small){color:var(--spenton-danger)}

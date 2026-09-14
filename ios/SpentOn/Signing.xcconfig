@@ -1,0 +1,2 @@
+// Local team selection survives ios:prepare. Never put credentials here.
+#include? "Signing.local.xcconfig"

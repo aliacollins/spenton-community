@@ -1,0 +1,116 @@
+/* Compact optional app layout. Shared grids bring the working area above the fold.
+   No financial rules or action handlers belong in this file. */
+.app-page-header,.budget-overview{display:contents}
+
+#root .app[data-app-view="pip"]{
+ --pip-page:var(--spenton-canvas);
+ --pip-soft:#edf2e3;
+ --spenton-chrome:#fafbf7;
+ --spenton-raised:#edf2e3;
+ --layout-shadow:0 2px 8px #253d3104;
+}
+#root .app[data-app-view="pip"] .main-content{max-width:1440px;padding:20px 24px}
+#root .app[data-app-view="pip"] .topbar{min-height:56px;padding:10px 24px;background:var(--pip-page)}
+#root .app[data-app-view="pip"] .page-heading .eyebrow{display:none}
+#root .app[data-app-view="pip"] .page-heading h1{font-size:28px;line-height:1.2;letter-spacing:-.8px}
+#root .app[data-app-view="pip"] .page-heading p{font-size:13px;line-height:1.5;margin:5px 0 0}
+#root .app[data-app-view="pip"] .app-page-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"title action" "month utility";gap:10px 24px;align-items:center;margin-bottom:16px}
+#root .app[data-app-view="pip"] .app-page-header>.page-heading,#root .app[data-app-view="pip"] .app-page-header>.month-toolbar{display:contents}
+#root .app[data-app-view="pip"] .app-page-header .page-heading>div:first-child{grid-area:title}
+#root .app[data-app-view="pip"] .app-page-header .heading-actions{grid-area:action;justify-self:end;padding:0}
+#root .app[data-app-view="pip"] .app-page-header .month-switcher{grid-area:month;justify-self:start;min-height:36px}
+#root .app[data-app-view="pip"] .app-page-header .month-tools{grid-area:utility;justify-self:end;margin:0;gap:16px}
+
+#root .app[data-app-view="pip"] .budget-overview{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(0,2fr);gap:24px;align-items:center;padding:20px;margin-bottom:20px;border:1px solid var(--pip-line);border-radius:16px;background:var(--pip-panel);box-shadow:var(--layout-shadow)}
+#root .app[data-app-view="pip"] .budget-overview .ready-stage{display:grid;grid-template-columns:minmax(0,1fr) 60px;align-items:center;gap:12px;margin:0}
+#root .app[data-app-view="pip"] .budget-overview .ready-stage>.pip-companion{--pip-size:60px;position:relative;grid-column:2;grid-row:1;right:auto;bottom:auto;align-self:center}
+/* The overview owns the surface; the shortfall keeps its red label and amount. */
+#root .app[data-app-view="pip"] .budget-overview .ready-banner{grid-column:1;grid-row:1;display:block;min-height:0;border:0;padding:0;background:transparent}
+#root .app[data-app-view="pip"] .budget-overview .ready-main{display:block;min-width:0}
+#root .app[data-app-view="pip"] .budget-overview .ready-label{font-size:11px;line-height:1.4;letter-spacing:.06em}
+#root .app[data-app-view="pip"] .budget-overview .ready-amount{display:block;font-size:30px;line-height:1.25;letter-spacing:-.8px;margin:4px 0 0;overflow-wrap:anywhere}
+#root .app[data-app-view="pip"] .budget-overview .ready-banner:not(.overplanned) .ready-amount>span{display:none}
+#root .app[data-app-view="pip"] .budget-overview .ready-banner.overplanned .ready-amount>span{display:block;margin-top:8px;font-size:12px;letter-spacing:0}
+#root .app[data-app-view="pip"] .budget-overview .ready-banner>.button{min-height:34px;padding:7px 10px;margin-top:10px;font-size:12px}
+#root .app[data-app-view="pip"] .budget-overview .budget-summary{padding:0;margin:0;border:0;align-self:center}
+#root .app[data-app-view="pip"] .budget-overview .budget-summary>span{display:block;padding:0 12px;font-size:12px;line-height:1.5}
+#root .app[data-app-view="pip"] .budget-overview .budget-summary>span:first-child{border-left:1px solid var(--pip-line)}
+#root .app[data-app-view="pip"] .budget-overview .budget-summary strong{display:block;font-size:21px;line-height:1.3;margin-top:8px;letter-spacing:-.4px;white-space:normal;overflow-wrap:anywhere}
+#root .app[data-app-view="pip"] .budget-controls{gap:8px;padding-bottom:12px}
+#root .app[data-app-view="pip"] .filter-tabs>button{min-height:34px;padding:6px 10px}
+#root .app[data-app-view="pip"] .budget-tools :is(.button,.table-search){min-height:38px;padding:7px 10px}
+#root .app[data-app-view="pip"] .budget-ledger thead th{height:36px}
+#root .app[data-app-view="pip"] :is(.ledger-scroll,.category-detail){box-shadow:var(--layout-shadow)}
+#root .app[data-app-view="pip"] .ledger-row{height:56px}
+#root .app[data-app-view="pip"].compact .ledger-row{height:48px}
+#root .app[data-app-view="pip"] .ledger-category{min-height:42px;padding-block:4px}
+#root .app[data-app-view="pip"] .category-detail{display:grid;grid-template-columns:max-content minmax(0,1fr);align-content:start;gap:0 8px;padding:16px}
+#root .app[data-app-view="pip"] .category-detail>*{grid-column:1/-1}
+#root .app[data-app-view="pip"] .category-detail .aside-heading{margin-bottom:12px}
+#root .app[data-app-view="pip"] .category-detail>.category-icon-edit{grid-column:1;margin:0}
+#root .app[data-app-view="pip"] .category-detail>h2{grid-column:2;align-self:center;font-size:22px;margin:0;line-height:1.3}
+#root .app[data-app-view="pip"] .category-detail>.detail-amount{font-size:30px;line-height:1.25;margin-top:14px}
+#root .app[data-app-view="pip"] .category-detail .detail-breakdown{margin-block:16px;gap:10px;font-size:12px}
+#root .app[data-app-view="pip"] .category-detail .detail-breakdown .breakdown-total{padding-top:10px}
+#root .app[data-app-view="pip"] .category-detail>.button{margin-top:0}
+#root .app[data-app-view="pip"] .category-detail>.button-row{gap:4px 12px;margin-top:8px}
+#root .app[data-app-view="pip"] .category-detail>.button-row>.text-button{min-height:32px;padding:6px 0;font-size:12px}
+#root .app[data-app-view="pip"] .budget-sharing-note{padding:14px 0;margin-top:16px;grid-template-columns:48px minmax(0,1fr) auto;gap:16px}
+#root .app[data-app-view="pip"] .budget-sharing-note img{width:48px;height:48px}
+
+#root .app[data-app-view="pip"] .filter-tabs{background:var(--pip-soft)}
+:root #root .app[data-app-view="pip"] .filter-tabs>.active{background:var(--pip-panel);box-shadow:0 1px 3px #253d3110}
+#root .app[data-app-view="pip"] :is(.account-overview,.insight-summary){background:var(--pip-panel);border:1px solid var(--pip-line);border-radius:16px;box-shadow:var(--layout-shadow)}
+#root .app[data-app-view="pip"] .account-overview{padding:20px 24px}
+#root .app[data-app-view="pip"] .account-overview strong{font-size:30px}
+#root .app[data-app-view="pip"] .main-content>.shared-budget-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:12px 24px;padding:16px 0;margin-bottom:20px}
+#root .app[data-app-view="pip"] .main-content>.shared-budget-preview>div{display:grid;gap:4px}
+#root .app[data-app-view="pip"] .main-content>.shared-budget-preview>div>strong{font-size:18px}
+#root .app[data-app-view="pip"] .main-content>.shared-budget-preview>p{grid-column:1/4;margin:0;font-size:12px}
+#root .app[data-app-view="pip"] .main-content>.shared-budget-preview>.text-button{grid-column:4;grid-row:1/3;align-self:center}
+
+
+
+
+@media(max-width:1100px){
+ #root .app[data-app-view="pip"] .budget-overview{grid-template-columns:minmax(0,1fr);gap:16px}
+ #root .app[data-app-view="pip"] .budget-overview .ready-stage{grid-template-columns:minmax(0,1fr) 60px}
+ #root .app[data-app-view="pip"] .budget-overview .ready-banner{display:flex;align-items:center;gap:16px}
+ #root .app[data-app-view="pip"] .budget-overview .ready-banner>.button{margin-top:0}
+ #root .app[data-app-view="pip"] .budget-overview .budget-summary{grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--pip-line);padding-top:12px}
+ #root .app[data-app-view="pip"] .budget-overview .budget-summary>span:first-child{border-left:0;padding-left:0}
+}
+@media(max-width:760px){
+ #root .app[data-app-view="pip"] .main-content{padding:16px 16px calc(96px + env(safe-area-inset-bottom,0px))}
+ #root .app[data-app-view="pip"] .budget-overview{padding:16px}
+ #root .app[data-app-view="pip"] .app-page-header{grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "action" "month" "utility";gap:10px}
+ #root .app[data-app-view="pip"] .app-page-header :is(.heading-actions,.month-tools){justify-self:start}
+ #root .app[data-app-view="pip"] .budget-overview .ready-banner{display:block}
+ #root .app[data-app-view="pip"] .budget-overview .ready-banner>.button{margin-top:8px;width:auto}
+ #root .app[data-app-view="pip"] .budget-overview .budget-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #root .app[data-app-view="pip"] .budget-overview .budget-summary>span{padding:0;font-size:12px;border:0}
+ #root .app[data-app-view="pip"] .budget-overview .budget-summary strong{font-size:20px}
+ #root .app[data-app-view="pip"] .budget-sharing-note{grid-template-columns:40px minmax(0,1fr)}
+ #root .app[data-app-view="pip"] .budget-sharing-note img{width:40px;height:40px}
+ #root .app[data-app-view="pip"] .main-content>.shared-budget-preview{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #root .app[data-app-view="pip"] .main-content>.shared-budget-preview>p{grid-column:1/-1}
+ #root .app[data-app-view="pip"] .main-content>.shared-budget-preview>.text-button{grid-column:1/-1;grid-row:auto;justify-self:start}
+}
+@media(max-width:360px){
+ #root .app[data-app-view="pip"] .filter-tabs{width:100%;min-width:0}
+ #root .app[data-app-view="pip"] .filter-tabs>button{min-width:0;font-size:10px;padding-inline:6px}
+}
+@media(max-width:520px){
+ #root .app[data-app-view="current"] .ready-banner.overplanned{flex-wrap:wrap}
+ #root .app[data-app-view="current"] .ready-banner.overplanned .ready-main{min-width:0}
+ #root .app[data-app-view="current"] .ready-banner.overplanned .ready-amount{display:block;overflow-wrap:anywhere}
+ #root .app[data-app-view="current"] .ready-banner.overplanned .ready-amount>span{display:block;margin-top:8px;line-height:1.5}
+ #root .app[data-app-view="current"] .ready-banner.overplanned>.button{min-height:44px}
+}
+@media(pointer:coarse){
+ #root .app[data-app-view="pip"] .filter-tabs>button,
+ #root .app[data-app-view="pip"] .budget-overview .ready-banner>.button,
+ #root .app[data-app-view="pip"] .budget-tools :is(.button,.table-search),
+ #root .app[data-app-view="pip"] .category-detail>.button-row>.text-button{min-height:44px}
+ #root .app[data-app-view="pip"] .ledger-category{min-height:44px}
+}

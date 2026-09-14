@@ -1,0 +1,196 @@
+# Public content only. Private API access additionally requires authentication.
+User-agent: *
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+Allow: /api/health$
+Allow: /api/auth/providers$
+Allow: /api/auth/email-status$
+Disallow: /admin
+Disallow: /index.html
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: ChatGPT-User
+Disallow: /
+Allow: /learn/self-hosting/$
+Allow: /learn/self-hosting$
+Allow: /learn/self-hosting/index.html$
+Allow: /$
+Allow: /landing$
+Allow: /landing/$
+Allow: /landing/index.html$
+Allow: /learn/$
+Allow: /learn$
+Allow: /learn/index.html$
+Allow: /learn/try/$
+Allow: /learn/try$
+Allow: /learn/try/index.html$
+Allow: /learn/shared-expenses/$
+Allow: /learn/shared-expenses$
+Allow: /learn/shared-expenses/index.html$
+Allow: /learn/envelope-budgeting/$
+Allow: /learn/envelope-budgeting$
+Allow: /learn/envelope-budgeting/index.html$
+Allow: /learn/credit-card-payments/$
+Allow: /learn/credit-card-payments$
+Allow: /learn/credit-card-payments/index.html$
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Claude-User
+Disallow: /
+Allow: /learn/self-hosting/$
+Allow: /learn/self-hosting$
+Allow: /learn/self-hosting/index.html$
+Allow: /$
+Allow: /landing$
+Allow: /landing/$
+Allow: /landing/index.html$
+Allow: /learn/$
+Allow: /learn$
+Allow: /learn/index.html$
+Allow: /learn/try/$
+Allow: /learn/try$
+Allow: /learn/try/index.html$
+Allow: /learn/shared-expenses/$
+Allow: /learn/shared-expenses$
+Allow: /learn/shared-expenses/index.html$
+Allow: /learn/envelope-budgeting/$
+Allow: /learn/envelope-budgeting$
+Allow: /learn/envelope-budgeting/index.html$
+Allow: /learn/credit-card-payments/$
+Allow: /learn/credit-card-payments$
+Allow: /learn/credit-card-payments/index.html$
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: Perplexity-User
+Disallow: /
+Allow: /learn/self-hosting/$
+Allow: /learn/self-hosting$
+Allow: /learn/self-hosting/index.html$
+Allow: /$
+Allow: /landing$
+Allow: /landing/$
+Allow: /landing/index.html$
+Allow: /learn/$
+Allow: /learn$
+Allow: /learn/index.html$
+Allow: /learn/try/$
+Allow: /learn/try$
+Allow: /learn/try/index.html$
+Allow: /learn/shared-expenses/$
+Allow: /learn/shared-expenses$
+Allow: /learn/shared-expenses/index.html$
+Allow: /learn/envelope-budgeting/$
+Allow: /learn/envelope-budgeting$
+Allow: /learn/envelope-budgeting/index.html$
+Allow: /learn/credit-card-payments/$
+Allow: /learn/credit-card-payments$
+Allow: /learn/credit-card-payments/index.html$
+Disallow: /*?
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+User-agent: GPTBot
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: Claude-Web
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: ClaudeBot
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: Google-Extended
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: Amazonbot
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: anthropic-ai
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: Bytespider
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: CCBot
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+User-agent: Applebot-Extended
+Disallow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+Sitemap: https://spenton.dev/sitemap.xml

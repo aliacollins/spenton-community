@@ -1,0 +1,26 @@
+name: Bug report
+description: Describe a reproducible problem with SpentOn.
+body:
+  - type: markdown
+    attributes:
+      value: Use fictional data. Do not include financial records, receipts, passwords or keys. Report security issues privately.
+  - type: input
+    id: version
+    attributes:
+      label: SpentOn version and hosting option
+      placeholder: 0.4.0-rc.3, Docker on macOS
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the browser and operating system.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

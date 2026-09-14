@@ -1,0 +1,42 @@
+{
+  "name": "spenton",
+  "private": true,
+  "version": "0.4.0-rc.3",
+  "type": "module",
+  "scripts": {
+    "dev": "node self-hosted/dev.mjs",
+    "start": "node self-hosted/start.mjs",
+    "build": "npm run licenses:notice && npm run discovery:generate && tsc -b && vite build",
+    "discovery:generate": "node tools/generate-discovery.mjs",
+    "test": "vitest run",
+    "test:server": "node --test server/self-hosted-package.test.mjs",
+    "check:fast": "npm test && npm run test:server && npm run build",
+    "ios:prepare": "npm run licenses:notice && node ios/tools/bundle-engine.mjs && python3 ios/tools/create-project.py",
+    "licenses:notice": "node tools/third-party-notices.mjs"
+  },
+  "engines": {
+    "node": ">=22.18.0 <23"
+  },
+  "dependencies": {
+    "@simplewebauthn/browser": "14.0.0",
+    "@simplewebauthn/server": "14.0.1",
+    "better-auth": "1.7.3",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "fast-check": "latest",
+    "turndown": "7.2.4",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "license": "AGPL-3.0-only"
+}

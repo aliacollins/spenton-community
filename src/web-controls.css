@@ -1,0 +1,77 @@
+/* SpentOn owns control appearance; semantic inputs still provide keyboard,
+   assistive-technology, autofill and constraint-validation behavior. */
+#root input:is([type="checkbox"],[type="radio"]):not(.rating-stars input,.understood-options input){
+ appearance:none;-webkit-appearance:none;display:inline-grid;place-content:center;
+ width:20px;height:20px;min-width:20px;min-height:20px;flex:0 0 20px;
+ margin:0;vertical-align:middle;border:1.5px solid var(--spenton-control-border);
+ border-radius:5px;background:var(--spenton-field);color:var(--spenton-on-primary);
+ cursor:pointer;box-shadow:none;
+}
+#root input[type="radio"]:not(.rating-stars input,.understood-options input){border-radius:50%}
+#root input:is([type="checkbox"],[type="radio"]):not(.rating-stars input,.understood-options input)::before{
+ content:"";display:block;opacity:0;transform:scale(.65);
+}
+#root input[type="checkbox"]:not(.rating-stars input,.understood-options input)::before{
+ width:5px;height:10px;margin-top:-2px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) scale(.65);
+}
+#root input[type="radio"]:not(.rating-stars input,.understood-options input)::before{width:8px;height:8px;border-radius:50%;background:currentColor}
+#root input:is([type="checkbox"],[type="radio"]):checked:not(.rating-stars input,.understood-options input){background:var(--spenton-primary);border-color:var(--spenton-primary)}
+#root input:is([type="checkbox"],[type="radio"]):checked:not(.rating-stars input,.understood-options input)::before{opacity:1;transform:scale(1)}
+#root input[type="checkbox"]:checked:not(.rating-stars input,.understood-options input)::before{transform:rotate(45deg)}
+#root input[type="checkbox"]:indeterminate{background:var(--spenton-primary);border-color:var(--spenton-primary)}
+#root input[type="checkbox"]:indeterminate::before{width:10px;height:2px;margin:0;border:0;background:currentColor;opacity:1;transform:none}
+#root input:is([type="checkbox"],[type="radio"]):disabled:not(.rating-stars input,.understood-options input){background:var(--spenton-raised);border-color:var(--spenton-border);color:var(--spenton-quiet);cursor:not-allowed;opacity:1}
+#root input:is([type="checkbox"],[type="radio"]):focus-visible:not(.rating-stars input,.understood-options input){outline:2px solid var(--spenton-focus);outline-offset:3px}
+
+#root .spenton-number{
+ display:grid;grid-template-columns:44px minmax(48px,1fr) 44px;align-items:stretch;
+ width:100%;min-width:0;min-height:46px;overflow:visible;
+ border:1px solid var(--spenton-control-border);border-radius:var(--spenton-control-radius);
+ background:var(--spenton-field);color:var(--spenton-ink);
+}
+#root .spenton-number>input[type="number"]{
+ appearance:textfield;-moz-appearance:textfield;min-width:0;width:100%;height:44px;
+ grid-column:2;grid-row:1;
+ background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+ padding:8px 4px!important;outline:none!important;text-align:center;color:var(--spenton-ink);font-size:16px;font-variant-numeric:tabular-nums;
+}
+#root .spenton-number>input::-webkit-inner-spin-button,#root .spenton-number>input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+#root .spenton-number>button{display:grid;place-items:center;width:44px;min-height:44px;padding:0;background:transparent;color:var(--spenton-ink);border:0;border-radius:8px;cursor:pointer}
+#root .spenton-number>button:first-of-type{grid-column:1;grid-row:1;border-right:1px solid var(--spenton-border);border-top-right-radius:0;border-bottom-right-radius:0}
+#root .spenton-number>button:last-child{grid-column:3;grid-row:1;border-left:1px solid var(--spenton-border);border-top-left-radius:0;border-bottom-left-radius:0}
+#root .spenton-number>button:disabled{background:transparent;color:var(--spenton-quiet);cursor:not-allowed;opacity:.6}
+#root .spenton-number:focus-within{outline:2px solid var(--spenton-focus);outline-offset:2px}
+#root .spenton-number>button:focus-visible{outline:2px solid var(--spenton-focus);outline-offset:-4px}
+#root .spenton-number:has(input:disabled){background:var(--spenton-raised);border-color:var(--spenton-border)}
+#root .spenton-number:has(input[aria-invalid="true"]){border-color:var(--spenton-danger)}
+
+#root .spenton-confirmation{width:480px;max-width:calc(100vw - 24px);background:var(--spenton-popover);color:var(--spenton-ink)}
+#root .spenton-confirmation .form-body{gap:16px;padding:24px}
+#root .spenton-confirmation .form-body>p{margin:0;font-size:15px;line-height:1.65;color:var(--spenton-muted)}
+#root .spenton-confirmation .confirmation-symbol{color:var(--spenton-warning)}
+#root .spenton-confirmation .modal-footer{gap:12px;flex-wrap:wrap}
+#root .spenton-confirmation .button{min-height:44px}
+#root .spenton-input-error,#root .modal .spenton-input-error{display:block;flex-basis:100%;grid-column:1/-1;width:100%;font-size:13px;line-height:1.5;color:var(--spenton-danger);margin-top:8px;font-weight:450;overflow-wrap:anywhere}
+#root label:has(>.spenton-input-error){flex-wrap:wrap}
+#root [data-spenton-invalid="true"]{border-color:var(--spenton-danger)}
+.spenton-tooltip{position:fixed;inset:auto;margin:0;padding:12px 14px;border:1px solid var(--spenton-control-border);border-radius:9px;background:var(--spenton-popover);color:var(--spenton-ink);box-shadow:var(--spenton-shadow);font:450 13px/1.55 Manrope,sans-serif;overflow-wrap:anywhere;overflow:auto;pointer-events:auto}
+.spenton-tooltip::backdrop{background:transparent}
+@media(max-width:600px){
+ #root .field-row:has(.spenton-number){display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+}
+
+@media(hover:hover){
+ #root input:is([type="checkbox"],[type="radio"]):not(:disabled):not(.rating-stars input,.understood-options input):hover{border-color:var(--spenton-focus)}
+ #root .spenton-number>button:hover:not(:disabled){background:var(--spenton-hover)}
+}
+@media(prefers-reduced-motion:no-preference){
+ #root input:is([type="checkbox"],[type="radio"]):not(.rating-stars input,.understood-options input){transition:background .12s,border-color .12s}
+ #root input:is([type="checkbox"],[type="radio"])::before{transition:opacity .12s,transform .12s}
+}
+@media(forced-colors:active){
+ #root input:is([type="checkbox"],[type="radio"]):not(.rating-stars input,.understood-options input){forced-color-adjust:none;background:Canvas;border-color:ButtonText;color:HighlightText}
+ #root input:is([type="checkbox"],[type="radio"]):checked:not(.rating-stars input,.understood-options input),#root input[type="checkbox"]:indeterminate{background:Highlight;border-color:Highlight}
+ #root input:is([type="checkbox"],[type="radio"]):disabled:not(.rating-stars input,.understood-options input){background:Canvas;border-color:GrayText;color:GrayText}
+ #root input:is([type="checkbox"],[type="radio"]):focus-visible:not(.rating-stars input,.understood-options input),#root .spenton-number:focus-within{outline-color:Highlight}
+ #root .spenton-number{border-color:ButtonText}
+}

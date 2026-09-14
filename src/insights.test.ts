@@ -1,0 +1,15 @@
+import {describe,it,expect} from 'vitest';
+import {blankBudget,calculate} from './engine';
+import type {Budget,Entry} from './engine';
+import {reviewMoney,spendingComparison} from './insights';
+const month='2026-09';
+function base():Budget{return {...blankBudget(),accounts:[{id:'cash',name:'Bank',type:'checking',opening:100000,date:'2026-08-01',lastFour:''}]};}
+function entry(id:string,date:string,kind:Entry['kind'],amount:number,extra:Partial<Entry>={}):Entry{return {id,date,kind,amount,accountId:'cash',categoryId:'groceries',payee:'Test',note:'',cleared:true,...extra};}
+describe('private money review',()=>{
+ it('suggests planning opening cash without claiming zero spending is a saving',()=>{const b=base(),r=reviewMoney(b,calculate(b,month),month);expect(r[0].id).toBe('ready');expect(r.some(x=>x.id==='record')).toBe(true);expect(spendingComparison(b,month,'2026-09-08').available).toBe(false);});
+ it('prioritizes overspending over goals and ready money',()=>{const b=base();b.entries=[entry('x','2026-09-03','expense',2000)];const r=reviewMoney(b,calculate(b,month),month);expect(r[0].id).toBe('over-groceries');expect(r[0].action).toEqual({kind:'category',id:'groceries'});});
+ it('excludes paused goals and recurring future income',()=>{const b=base();b.accounts=[];b.categories[0].target=5000;b.categories[0].targetPausedMonths=[month];const r=reviewMoney(b,calculate(b,month),month);expect(r.some(x=>x.id==='goal-'+b.categories[0].id)).toBe(false);expect(r.some(x=>x.id==='ready')).toBe(false);});
+ it('compares matching days and nets refunds without counting transfers',()=>{const b=base();b.accounts.push({id:'save',name:'Savings',type:'savings',opening:0,date:'2026-08-01',lastFour:''});b.entries=[entry('a','2026-08-02','expense',1000),entry('b','2026-08-20','expense',9000),entry('c','2026-09-03','expense',2000),entry('r','2026-09-04','refund',500,{refundOf:'c'}),entry('t','2026-09-04','transfer',10000,{categoryId:undefined,toAccountId:'save'}),entry('future','2026-09-20','expense',50000)];const c=spendingComparison(b,month,'2026-09-08');expect(c.available).toBe(true);expect(c.current).toBe(1500);expect(c.before).toBe(1000);expect(c.delta).toBe(500);expect(c.changes[0].delta).toBe(500);});
+ it('uses full historical months, and handles year and short-month boundaries',()=>{const b=base();expect(spendingComparison(b,'2027-01','2027-01-10').previous).toBe('2026-12');expect(spendingComparison(b,'2027-03','2027-03-31').day).toBe(28);b.entries=[entry('a','2026-08-29','expense',1000),entry('b','2026-09-30','expense',2000)];expect(spendingComparison(b,month,'2026-10-05').delta).toBe(1000);expect(spendingComparison(b,'2026-10','2026-09-08').available).toBe(false);});
+ it('explains unbacked opening card debt separately',()=>{const b=base();b.accounts.push({id:'card',name:'Visa',type:'credit',opening:-7000,date:'2026-08-01',lastFour:''});const r=reviewMoney(b,calculate(b,month),month);expect(r[0].id).toBe('card-card');expect(r[0].detail).toContain('not just your statement');});
+});

@@ -1,0 +1,94 @@
+/* White website surfaces and semantic controls, independent of device appearance. */
+:root { color-scheme:only light; }
+
+ :root { --positive:var(--spenton-primary);--forest:var(--spenton-primary);--deep:var(--spenton-page);--ink:var(--spenton-ink);--muted:var(--spenton-muted);--paper:var(--spenton-page);--surface:var(--spenton-surface);--cream:var(--spenton-raised);--line:var(--spenton-border);--green:var(--spenton-positive);--orange:var(--spenton-warning);--lime:var(--spenton-primary); background:var(--spenton-page); color:var(--spenton-ink); }
+ body { background:var(--spenton-page); color:var(--spenton-ink); }
+ #root :is(.app,.cloud-page,.workspace-page,.main-content,.main-shell) { background:var(--spenton-page); color:var(--spenton-ink); }
+ #root :is(.sidebar,.topbar,.workspace-header) { background:var(--spenton-chrome); border-color:var(--spenton-border); }
+ #root :is(.workspace-switch,.space-menu-trigger,.space-menu-popover,.account-tile,.context-card,.budget-lane,.budget-envelope,.modal,.auth-card,.workspace-budgets,.workspace-plan,.workspace-budget,.settings-card,.settings-profile,.insights-panel,.investment-detail,.owner-panel,.owner-card) { background:var(--spenton-surface); border-color:var(--spenton-border); color:var(--spenton-ink); }
+ #root :is(.modal-header,.modal-footer,.transaction-columns,.ledger-columns,.ledger-group-heading,.lane-heading,.lane-total,.budget-controls,.account-overview,.insight-summary,.payment-reserves,.shared-budget-preview,.transaction-tabs,.auth-story,.verification-art,.settings-reminders,.workspace-plan-card) { background:var(--spenton-raised); border-color:var(--spenton-border); }
+ #root :is(h1,h2,h3,h4,strong,label,.brand,.month-name,.ledger-category-title,.ledger-spent,.ledger-available,.inline-plan,.account-big-balance,.transaction-amount,.transaction-payee,.category-detail .detail-amount) { color:var(--spenton-ink); }
+ #root :is(p,small,.muted,.eyebrow,.breadcrumb,.nav-heading,.nav-item,.ledger-status,.transaction-date,.transaction-category,.transaction-account,.account-type,.field > span,.detail-breakdown,.card-facts,.check-label,.people-footnote) { color:var(--spenton-muted); }
+ #root :is(.button.secondary,.button.ghost,.filter-tabs > button,.transaction-tabs > button,.icon-button,.space-menu-item,.ledger-toolbar button) { background:transparent; border-color:var(--spenton-control-border); color:var(--spenton-ink); }
+ #root :is(.button.primary,.button.dark) { background:var(--spenton-primary); color:var(--spenton-on-primary); border-color:var(--spenton-primary); }
+ #root :is(.button.primary,.button.dark) :is(span,strong,small) { color:inherit; }
+ #root :is(.nav-item.active,.filter-tabs > button.active,.transaction-tabs > button.active,.budget-envelope.selected,.workspace-budget:hover) { background:var(--spenton-selected); color:var(--spenton-ink); }
+ #root :is(.ledger-row,.transaction-row,.ledger-group-heading,.budget-table-footer,.modal-header,.modal-footer) { border-color:var(--spenton-border); }
+ #root :is(.ledger-row:hover,.transaction-row:hover) { background:var(--spenton-hover); }
+ #root :is(input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea,.spenton-select-trigger) { background:var(--spenton-field); color:var(--spenton-ink); border-color:var(--spenton-control-border); }
+ #root input::placeholder,#root textarea::placeholder { color:var(--spenton-quiet); }
+ #root :is(.spenton-select-option,.date-picker-day,.month-picker-month) { color:var(--spenton-ink); }
+ #root :is(.spenton-select-option[aria-selected=true],.date-picker-day.selected,.month-picker-month.selected) { background:var(--spenton-primary); color:var(--spenton-on-primary); }
+ #root :is(.text-button,.secondary-link,.auth-link) { color:var(--spenton-ink); }
+ #root .green-text { color:var(--spenton-ink)!important; }
+ #root :is(.negative,.negative-pill,.danger-text) { color:var(--spenton-danger)!important; }
+ #root .needs-funding { color:var(--spenton-warning); }
+ #root :is(.ready-banner,.money-review-lead,.insights-next-action) { background:var(--spenton-raised); border-color:var(--spenton-border); }
+ #root :is(.ready-banner,.money-review-lead,.insights-next-action) :is(strong,p,span,h2) { color:var(--spenton-ink); }
+ #root .ready-banner.overplanned { background:var(--spenton-danger-bg); }
+ #root .ready-banner.overplanned :is(.ready-label,.ready-amount) { color:var(--spenton-danger); }
+ #root .ready-banner.overplanned .ready-amount>span { color:var(--spenton-muted); }
+ #root .ready-banner.overplanned .tiny-dot { background:var(--spenton-danger); }
+ #root :is(.form-error,.warning-banner,.cloud-error,.access-notice) { background:var(--spenton-warning-bg); border-color:color-mix(in srgb,var(--spenton-warning) 35%,var(--spenton-border)); color:var(--spenton-warning); }
+ #root :is(.negative,.negative-pill,.amount-shortfall,.danger-text) { color:var(--spenton-danger); }
+ #root :is(.hint,.transaction-explanation,.allocation-source,.category-target,.goal-preview,.plan-money-summary) { background:var(--spenton-raised); border-color:var(--spenton-border); color:var(--spenton-muted); }
+ #root :is(.hint,.transaction-explanation,.allocation-source) p { color:var(--spenton-muted); }
+ #root .modal{background:var(--spenton-popover);}
+ #root .modal :is(.modal-header,.modal-footer){background:var(--spenton-popover);}
+ #root .modal::backdrop { background:var(--spenton-backdrop); }
+ #root :is(button,a,summary,input,select,textarea):focus-visible { outline-color:var(--spenton-focus); }
+  #root :is(.form-error,.cloud-error) { background:var(--spenton-danger-bg); color:var(--spenton-danger); border-color:var(--spenton-danger); }
+ /* People owns its semantic palette, including dark money and status surfaces. */
+ #root .people-workspace,.people-dialog { background:var(--people-bg); }
+ #root .people-workspace :is(h1,h2,h3,strong),#root .people-dialog :is(h2,h3,strong) { color:var(--people-ink); }
+ #root .people-workspace .person-avatar { background:var(--spenton-raised); color:var(--spenton-ink); }
+ #root .people-workspace .people-search { background:transparent; }
+ #root .people-workspace .person-amounts span { color:var(--people-muted); }
+
+
+ #root :is(.ledger-scroll,.ledger-row,.budget-table-footer,.context-column,.transaction-list,.settings-card,.cloud-auth,.auth-layout,.account-action,.insights-timeline,.review-comparison) { background:var(--spenton-surface); border-color:var(--spenton-border); }
+ #root .ledger-row.selected { background:var(--spenton-selected); }
+ #root .budget-ledger :is(thead,tfoot) :is(th,td) { background:var(--spenton-raised); border-color:var(--spenton-border); color:var(--spenton-ink); }
+ #root .budget-ledger .ledger-group-heading :is(td,strong),#root .budget-month-trigger { color:var(--spenton-ink); }
+ #root :is(.unreserved-notice,.cash-shortfall-notice) { background:var(--spenton-warning-bg); color:var(--spenton-warning); border-color:color-mix(in srgb,var(--spenton-warning) 35%,var(--spenton-border)); }
+ #root :is(.unreserved-notice,.cash-shortfall-notice) :is(p,span,strong) { color:var(--spenton-warning); }
+ #root :is(.reserve-item,.this-month,.density-button,.category-target,.privacy-note,.settings-reminders,.auth-switch,.social-signin-button,.last-used-tag,.account-provider,.auth-email-heading) { background:var(--spenton-raised); border-color:var(--spenton-border); color:var(--spenton-ink); }
+ #root :is(.sidebar .nav-item span,.sidebar-bottom,.budget-summary > span,.save-indicator,.group-count,.auth-email-heading,.auth-password-heading,.auth-privacy,.auth-help,.insights-kicker,.insights-bar-copy span,.insights-period,.insights-fineprint) { color:var(--spenton-muted); border-color:var(--spenton-border); }
+ #root .sidebar .nav-item.active span { color:var(--spenton-ink); }
+ #root .button.secondary { background:var(--spenton-raised); color:var(--spenton-ink); border-color:var(--spenton-control-border); }
+ #root .button.ghost { color:var(--spenton-muted); }
+ #root .people-workspace .people-filters button { color:var(--spenton-muted); background:transparent; }
+ #root .people-workspace .people-filters button[aria-pressed=true] { background:var(--spenton-selected); color:var(--spenton-ink); }
+ #root .people-workspace .people-search-wrap input.people-search { background:transparent; }
+ #root .people-workspace .button.primary { color:var(--spenton-on-primary); background:var(--spenton-primary); }
+
+
+ /* Startup renders before an account's Current/Pip preference is available. */
+ #root .cloud-page>.cloud-card { background:var(--spenton-surface); border-color:var(--spenton-border); color:var(--spenton-ink); box-shadow:var(--spenton-shadow); }
+ #root .cloud-page>.cloud-card>svg { color:var(--spenton-primary); }
+ #root .cloud-page>header>span { color:var(--spenton-muted); }
+ #root .cloud-service-error { border-color:var(--spenton-border); }
+ #root :is(.cloud-brand,.cloud-brand span) { color:var(--spenton-ink); }
+ #root :is(.cloud-eyebrow,.auth-privacy a,.auth-story-footer a,.privacy-links a) { color:var(--spenton-muted); }
+ #root :is(.auth-switch,.auth-email-heading) { background:transparent; }
+
+
+ #root :is(.transactions-panel,.transactions-toolbar,.recorded-heading,.transaction-edit-hint,.scheduled-transactions,.scheduled-row,.card-backing,.card-explanation,.no-statement) { background:var(--spenton-surface); border-color:var(--spenton-border); }
+ #root .card-guidance { background:var(--spenton-warning-bg); border-color:color-mix(in srgb,var(--spenton-warning) 35%,var(--spenton-border)); }
+ #root .card-guidance :is(strong,p,span) { color:var(--spenton-warning); }
+ #root .card-guidance.funded { background:var(--spenton-raised); }
+ #root .card-guidance.funded :is(strong,p,span) { color:var(--spenton-ink); }
+ #root :is(.account-overview span,.insight-summary > div > span,.card-facts span,.card-backing span,.account-digits,.scheduled-heading,.scheduled-scope,.scheduled-meta,.scheduled-note) { color:var(--spenton-muted); }
+ #root .card-facts .green-text { color:var(--spenton-primary); }
+ #root .insights-redesign { --insight-ink:var(--spenton-ink);--insight-muted:var(--spenton-muted);--insight-line:var(--spenton-border); }
+ #root :is(.insights-bar-track,.progress-track,.mini-progress) { background:var(--spenton-raised); }
+ #root .insights-category-bars > button:first-child .insights-bar-track i { background:var(--spenton-plot); }
+ #root .insights-timeline svg text { fill:var(--spenton-muted); }
+ #root .account-symbol{background:var(--spenton-category-sage-bg);color:var(--spenton-category-sage-fg)}
+ #root :is(.account-overview,.insight-summary)>div{border-color:var(--spenton-border)}
+
+@media (hover:hover){
+ #root .button.primary:hover:not(:disabled),#root .button.dark:hover:not(:disabled){background:var(--spenton-primary-hover);color:var(--spenton-on-primary)}
+ #root .button.secondary:hover:not(:disabled),#root .button.ghost:hover:not(:disabled){background:var(--spenton-hover);color:var(--spenton-ink)}
+ #root .icon-button:hover:not(:disabled){background:var(--spenton-hover);color:var(--spenton-ink)}
+}

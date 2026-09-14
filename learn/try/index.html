@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Try shared expenses with example money | SpentOn</title>
+  <meta name="description" content="Try a fictional shared dinner and record repayments. See your own spending, money friends owe and available cash without creating an account." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="canonical" href="https://spenton.dev/learn/try/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preload" href="/fonts/manrope.ttf" as="font" type="font/ttf" crossorigin />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SpentOn" />
+  <meta property="og:title" content="Try shared expenses with example money | SpentOn" />
+  <meta property="og:description" content="Try a fictional shared dinner and record repayments. See your own spending, money friends owe and available cash without creating an account." />
+  <meta property="og:url" content="https://spenton.dev/learn/try/" />
+  <meta property="og:image" content="https://spenton.dev/brand/spenton-og-your-choice.png" />
+  <meta property="og:image:alt" content="SpentOn: Comprehensive, open-source envelope budgeting. Cloud beta available; self-hosting coming soon." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Try shared expenses with example money | SpentOn" />
+  <meta name="twitter:description" content="Try a fictional shared dinner and record repayments. See your own spending, money friends owe and available cash without creating an account." />
+  <meta name="twitter:image" content="https://spenton.dev/brand/spenton-og-your-choice.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://spenton.dev/learn/try/#webpage","url":"https://spenton.dev/learn/try/","name":"Try shared expenses with example money | SpentOn","description":"Try a fictional shared dinner and record repayments. See your own spending, money friends owe and available cash without creating an account.","inLanguage":"en","isPartOf":{"@id":"https://spenton.dev/#website"},"publisher":{"@id":"https://spenton.dev/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SpentOn","item":"https://spenton.dev/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://spenton.dev/learn/"},{"@type":"ListItem","position":3,"name":"Try an example","item":"https://spenton.dev/learn/try/"}]}]}</script>
+  <link rel="stylesheet" href="/src/landing.css" />
+  <link rel="stylesheet" href="/src/guides.css" />
+<script type="module" src="/src/public-demo.ts"></script>
+</head>
+<body class="guide-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="nav-shell"><header class="nav"><a class="wordmark" href="/" aria-label="SpentOn home"><img src="/brand/spenton-symbol.svg" width="30" height="30" alt=""><span>Spent<em>On</em></span></a><nav class="nav-links" aria-label="Main navigation"><a href="/#product">Product</a><a href="/learn/">Guides</a><a href="/#hosting">Cloud &amp; self-hosting</a></nav><div class="nav-actions"><a class="sign-in" href="/app">Sign in</a><a class="btn btn-primary" href="/app?signup=1">Try Cloud</a></div></header></div>
+<main class="guide-main" id="main" tabindex="-1">
+<nav class="guide-breadcrumbs" aria-label="Breadcrumb"><a href="/">SpentOn</a><span aria-hidden="true">/</span><a href="/learn/">Guides</a><span aria-hidden="true">/</span><span>Try an example</span></nav>
+<header class="guide-hero"><p class="eyebrow">TRY SPENTON WITH EXAMPLE MONEY</p><h1>A shared dinner. Your own budget.</h1><p class="guide-lead">You paid $120 for dinner with Maya and Sam. Your share is $40. See what changes when each friend pays you back.</p></header>
+<div class="guide-layout"><section class="demo-console" id="try-dinner" aria-labelledby="try-title">
+<div class="console-top"><h2 class="console-title" id="try-title">Dinner with friends</h2><span class="example-badge">EXAMPLE · USD</span></div>
+<div class="bill-line"><div><span>You paid the bill</span><p>Split equally between three people</p></div><strong class="num">$120</strong></div>
+<dl class="demo-metrics"><div class="metric"><dt>Your spending</dt><dd class="num" id="try-spending">$40.00</dd><small>Only your share</small></div><div class="metric owed"><dt>Friends owe you</dt><dd class="num" id="try-owed">$80.00</dd><small>Not available cash</small></div></dl>
+<dl class="friends"><div class="friend"><dt><span class="initial" aria-hidden="true">M</span>Maya</dt><dd><span class="payment-state" id="try-maya-state">Owes you</span><strong class="num">$40</strong></dd></div><div class="friend"><dt><span class="initial peach" aria-hidden="true">S</span>Sam</dt><dd><span class="payment-state" id="try-sam-state">Owes you</span><strong class="num">$40</strong></dd></div></dl>
+<div class="demo-bank"><span>Recorded bank balance</span><strong class="num" id="try-bank">$380.00</strong></div><div class="demo-bank"><span>Available to plan</span><strong class="num" id="try-ready">$0.00</strong></div>
+<p class="demo-result" id="try-result" role="status">You paid $120. Your spending is $40, and your friends owe $80. Unpaid amounts are not available cash.</p>
+<div class="try-controls" data-demo-control hidden><button class="btn btn-secondary" id="try-maya" type="button">Record Maya’s $40 repayment</button><button class="btn btn-secondary" id="try-sam" type="button">Record Sam’s $40 repayment</button><button class="text-link" id="try-reset" type="button">Reset example</button></div>
+<noscript><p class="demo-result">After Maya repays $40, your bank holds $420 and Sam still owes $40. After both repay you, the bank holds $460 and $80 is available to plan. Your spending stays $40. Enable JavaScript to step through the example.</p></noscript>
+<div class="demo-bottom"><span>Started with $500</span><span>Nothing is saved or sent</span></div>
+</section><aside class="guide-aside"><img src="/brand/pip-welcome-small.png" width="64" height="64" alt=""><h2>Choose how to run your budget.</h2><p>Use the same budgeting rules in Cloud or on your own server. Cloud is in beta now; the free self-hosted release is coming soon.</p><a class="btn btn-primary" href="/app?signup=1">Try Cloud free for 40 days</a><p>Cloud beta: no card needed or automatic trial charge.</p><a class="text-link" href="/learn/shared-expenses/">Read how shared expenses work</a><a class="text-link" href="/learn/self-hosting/">Read the self-hosting guide</a></aside></div>
+<section class="guide-body guide-next" aria-labelledby="example-plan"><h2 id="example-plan">Where did the rest of the money go?</h2><p>You started with $500, with $300 set aside for Bills, $120 for Dining and $80 available to plan. Paying the $120 dinner leaves $380 in the bank. Bills still has $300 set aside and Dining has $80 left. The $80 you paid for friends is outstanding, so it is no longer available to plan.</p><p>Receiving a repayment brings cash back into the account and reduces what friends owe you. It does not create new income or change your $40 share of dinner. In your real budget, make or check payments through your usual bank or payment service, then record what happened.</p><p>This page uses fixed fictional records. It does not read your accounts, contact friends or save a budget.</p></section>
+</main>
+<footer class="guide-footer"><a class="wordmark" href="/" aria-label="SpentOn home"><span>Spent<em>On</em></span></a><nav aria-label="Footer navigation"><a href="/learn/">Guides</a><a href="/learn/self-hosting/">Self-hosting</a><a href="https://www.reddit.com/r/Spenton/">Community</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/app">Sign in</a></nav><span>Your budget. Your choice.</span></footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Pip, a little peach coin pouch friend sitting with dangling feet">
+ <style>.happy-eyes,.sleep-eyes,.yawn-mouth,.hug-heart,.worried-brows,.worried-mouth{display:none}</style>
+ <defs><linearGradient id="pip-fabric" x2="0%" y2="100%"><stop stop-color="#ffe9d1"/><stop offset="1" stop-color="#f5c9a9"/></linearGradient></defs>
+ <ellipse class="pip-contact" cx="90" cy="132" rx="39" ry="4" fill="#476743" opacity=".18"/>
+ <g stroke="#546b47" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <g class="leg leg-left"><path d="M72 127q-4 13-2 23" fill="none"/><path d="M69 147q-10-3-12 5q-2 8 13 9q9 0 8-8q-1-5-9-6" fill="#bfd0a6"/></g>
+  <g class="leg leg-right"><path d="M108 127q4 13 2 23" fill="none"/><path d="M111 147q10-3 12 5q2 8-13 9q-9 0-8-8q1-5 9-6" fill="#bfd0a6"/></g>
+  <g class="body">
+   <path d="M49 76Q38 87 37 110q-1 27 53 27t53-27q-1-23-12-34Q113 61 90 62T49 76z" fill="url(#pip-fabric)"/>
+   <path d="M48 76q42-25 84 0" fill="none" stroke="#b4c9a0" stroke-width="9"/>
+   <path d="M48 76q42-25 84 0" fill="none" stroke="#657b55" stroke-width="2"/>
+   <g class="sprout"><path d="m85 61 7-10m3 10-7-10" stroke="#657b55" stroke-width="4"/><circle cx="85" cy="48" r="7" fill="#bfd4aa"/><circle cx="97" cy="48" r="7" fill="#d8e5b9"/><circle cx="83" cy="46" r="2" fill="#f9ffe9" stroke="none"/></g>
+   <path d="M46 110q2 19 43 20m43-20q-2 12-15 15" fill="none" stroke="#e1ad8e" stroke-width="1.5" stroke-dasharray="2 4"/>
+   <path d="M51 86q-5 7-5 14" stroke="#fff4e5" stroke-width="5"/>
+   <g class="arm arm-left"><path d="M43 99q-11 3-13 14q0 8 7 7q7-1 11-8Z" fill="#f9d7b9"/></g>
+   <g class="arm arm-right"><path d="M137 99q11 3 13 14q0 8-7 7q-7-1-11-8Z" fill="#f9d7b9"/></g>
+   <ellipse class="cheek" cx="59" cy="108" rx="11" ry="6" fill="#efb5a7" stroke="none" opacity=".7"/>
+   <ellipse class="cheek" cx="121" cy="108" rx="11" ry="6" fill="#efb5a7" stroke="none" opacity=".7"/>
+   <g class="gaze">
+    <g class="eyes" stroke="none" fill="#3f533b"><ellipse cx="71" cy="96" rx="7" ry="9"/><ellipse cx="109" cy="96" rx="7" ry="9"/><g fill="#fffef8"><circle cx="73" cy="93" r="2.7"/><circle cx="111" cy="93" r="2.7"/><circle cx="69" cy="100" r="1.2"/><circle cx="107" cy="100" r="1.2"/></g></g>
+    <g class="happy-eyes" fill="none"><path d="M65 97q6-8 12 0m26 0q6-8 12 0"/></g>
+    <g class="sleep-eyes" fill="none"><path d="M65 98q6 5 12 0m26 0q6 5 12 0"/></g>
+    <g class="worried-brows" fill="none" stroke-width="2.5"><path d="m65 85 10-4m30 0 10 4"/></g>
+   </g>
+   <path class="smile" d="M84 108q6 7 12 0" fill="none" stroke-width="2.5"/>
+   <path class="worried-mouth" d="M85 112q5-5 10 0" fill="none" stroke-width="2.5"/>
+   <ellipse class="yawn-mouth" cx="90" cy="111" rx="5" ry="7" fill="#a16f58" stroke="none"/>
+   <path class="hug-heart" d="M90 119c-16-9-12-19-5-18q4 0 5 4q2-4 6-4c8-1 10 10-6 18" fill="#dfa191" stroke="#bc8071" stroke-width="1.5"/>
+  </g>
+ </g>
+<style>.eyes{display:none}.sleep-eyes{display:inline}</style></svg>

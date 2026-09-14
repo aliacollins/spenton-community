@@ -1,0 +1,238 @@
+/* People answers balances, reviews and next actions. Bill detail is a separate level. */
+:root #root .app .people-workspace{max-width:none;margin:0;background:transparent}
+:root #root .app .people-simple{gap:20px;color:var(--spenton-ink)}
+:root #root .app .people-workspace>.people-simple{padding:0}
+:root #root .app .people-simple .shared-content{display:grid;gap:20px;min-width:0}
+:root #root .app .people-simple .people-intro{gap:24px;align-items:center}
+:root #root .app .people-simple .people-intro h1{font-size:30px;line-height:1.2;letter-spacing:-.8px;margin:0}
+:root #root .app .people-simple .people-intro p{font-size:14px;line-height:1.6;margin:6px 0 0;color:var(--spenton-muted)}
+:root #root .app .people-simple .button{min-height:44px;padding:10px 14px;border-radius:var(--spenton-control-radius);font-size:13px;gap:8px}
+:root #root .app .people-simple .people-sections{width:max-content;padding:4px;gap:4px;background:var(--spenton-raised);border-radius:10px}
+:root #root .app .people-simple .people-sections>button{min-height:36px;padding:8px 18px;font-size:13px;border-radius:7px}
+:root #root .app .people-simple .people-sections>button[aria-pressed=true]{background:var(--spenton-surface);color:var(--spenton-ink);box-shadow:0 1px 3px #253d310d}
+:root #root .app .people-simple .people-summary{display:block;background:transparent;border:0;border-bottom:1px solid var(--spenton-border);border-radius:0;box-shadow:none;padding:0 0 24px}
+:root #root .app .people-simple .people-balance-scope{font-size:12px;line-height:1.5;color:var(--spenton-muted);margin:0 0 16px}
+:root #root .app .people-simple .people-money-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+:root #root .app .people-simple .people-money-section{min-width:0}
+:root #root .app .people-simple .people-money-section+div{border-left:1px solid var(--spenton-border);padding-left:32px}
+:root #root .app .people-simple .people-money-section h2{display:flex;align-items:center;gap:8px;font-size:13px;line-height:1.5;font-weight:550;margin:0 0 8px;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-money-values{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 24px}
+:root #root .app .people-simple .people-balance-link{display:inline-flex;align-items:baseline;gap:6px;max-width:100%;min-height:36px;padding:0;border:0;background:transparent;color:var(--spenton-ink);font-size:27px;font-weight:600;letter-spacing:-.5px;line-height:1.4;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+:root #root .app .people-simple .people-balance-link small{font-size:11px;letter-spacing:0;font-weight:500;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-balance-link svg{flex:none;align-self:center;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-zero{font-size:22px;line-height:1.4;letter-spacing:-.3px;color:var(--spenton-muted);margin:0}
+:root #root .app .people-simple .people-request-note{display:flex;align-items:center;gap:6px;text-align:left;max-width:100%;padding:8px 0 0;margin:0;font-size:12px;line-height:1.6;color:var(--spenton-muted);border:0;background:transparent}
+:root #root .app .people-simple .people-review-queue{min-width:0}
+:root #root .app .people-simple .people-review-queue>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+:root #root .app .people-simple .people-review-queue>header>div{display:flex;align-items:center;gap:8px}
+:root #root .app .people-simple .people-review-queue h2{font-size:16px;line-height:1.5;font-weight:600;margin:0}
+:root #root .app .people-simple .people-review-queue>header span{font-size:12px;color:var(--spenton-muted);font-variant-numeric:tabular-nums}
+:root #root .app .people-simple .people-review-queue>header p{font-size:12px;line-height:1.5;margin:0;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-review-list{background:var(--spenton-surface);border:1px solid var(--spenton-border);border-radius:14px;overflow:hidden}
+:root #root .app .people-simple .people-review-row{display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;gap:16px;padding:16px 20px;min-width:0}
+:root #root .app .people-simple .people-review-row+.people-review-row{border-top:1px solid var(--spenton-border)}
+:root #root .app .people-simple .people-review-row>.person-avatar{width:36px;height:36px;font-size:15px}
+:root #root .app .people-simple .people-review-row h3{font-size:15px;font-weight:550;line-height:1.5;margin:0 0 4px;overflow-wrap:anywhere}
+:root #root .app .people-simple .people-review-row p{font-size:12px;line-height:1.6;margin:0;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-review-more{margin-top:8px;min-height:40px;font-size:13px;color:var(--spenton-ink)}
+:root #root .app .people-simple .people-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:4px 0 -8px}
+:root #root .app .people-simple .people-section-heading h2{display:flex;align-items:baseline;gap:10px;font-size:17px;font-weight:600;margin:0}
+:root #root .app .people-simple .people-section-heading h2>span{font-size:12px;font-weight:400;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-section-heading>.text-button{font-size:13px;min-height:40px;gap:8px}
+:root #root .app .people-simple .people-scope-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+:root #root .app .people-simple .people-filters{display:flex;flex-wrap:nowrap;gap:4px;width:max-content;max-width:100%;padding:4px;border-radius:10px;background:var(--spenton-raised)}
+:root #root .app .people-simple .people-filters>button{min-height:36px;padding:8px 12px;font-size:13px;border-radius:7px;white-space:nowrap;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-filters>button[aria-pressed=true]{background:var(--spenton-surface);color:var(--spenton-ink);box-shadow:0 1px 3px #253d310d}
+:root #root .app .people-simple .people-filter-tools{display:flex;align-items:center;justify-content:end;flex:1;min-width:0;gap:12px}
+:root #root .app .people-simple .people-search-wrap{display:flex;align-items:center;gap:8px;flex:1;max-width:300px;min-width:160px;border:1px solid var(--spenton-control-border);border-radius:var(--spenton-control-radius);background:var(--spenton-field);padding:0 12px}
+:root #root .app .people-simple .people-search-wrap input{font-size:13px;min-height:42px;color:var(--spenton-ink)}
+:root #root .app .people-simple .people-filter-tools>.spenton-select{width:176px;max-width:100%;min-width:0}
+:root #root .app .people-simple .people-filter-tools .spenton-select-trigger{min-height:44px;font-size:13px}
+:root #root .app .people-simple .people-directory{display:block;position:static;max-height:none;overflow:visible;padding:0;min-width:0}
+:root #root .app .people-simple .people-rows{display:grid;gap:0;background:var(--spenton-surface);border:1px solid var(--spenton-border);border-radius:14px;overflow:hidden}
+:root #root .app .people-simple .people-rows:empty{display:none}
+:root #root .app .people-simple .people-person-card{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(200px,auto) 20px;gap:16px;align-items:center;padding:20px;width:100%;min-width:0;min-height:96px;border:0;border-radius:0;background:transparent;text-align:left;box-shadow:none}
+:root #root .app .people-simple .people-person-card+.people-person-card{border-top:1px solid var(--spenton-border)}
+:root #root .app .people-simple .people-person-card>.person-avatar{grid-column:1;width:44px;height:44px;font-size:18px}
+:root #root .app .people-simple .people-person-name{grid-column:2;min-width:0}
+:root #root .app .people-simple .people-person-name strong{display:block;font-size:17px;line-height:1.4;letter-spacing:-.2px;font-weight:600;color:var(--spenton-ink);overflow-wrap:anywhere}
+:root #root .app .people-simple .people-person-name small{display:block;font-size:12px;line-height:1.5;color:var(--spenton-muted);margin-top:5px;overflow-wrap:anywhere}
+:root #root .app .people-simple .people-person-name .person-review-hint{color:var(--spenton-warning)}
+:root #root .app .people-simple .people-row-amounts{display:grid;grid-column:3;gap:8px;min-width:0}
+:root #root .app .people-simple .person-amounts{display:grid;gap:8px;min-width:0}
+:root #root .app .people-simple .person-amount-line{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-width:0}
+:root #root .app .people-simple .person-amount-line>span{font-size:12px;color:var(--spenton-muted);line-height:1.5}
+:root #root .app .people-simple .person-amount-line strong{font-size:18px;font-weight:600;line-height:1.4;text-align:right;font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:anywhere;min-width:0;color:var(--spenton-ink)}
+:root #root .app .people-simple .person-amount-line strong>small{font-size:11px;font-weight:400;color:var(--spenton-muted)}
+:root #root .app .people-simple .person-chevron{grid-column:4;grid-row:1;width:17px;height:17px;color:var(--spenton-muted)}
+:root #root .app .people-simple .person-settled{font-size:14px;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-empty{display:flex;align-items:center;flex-direction:column;gap:12px;text-align:center;background:var(--spenton-surface);padding:32px 24px;border:1px solid var(--spenton-border);border-radius:14px}
+:root #root .app .people-simple .people-empty>svg{width:32px;height:32px;color:var(--spenton-positive)}
+:root #root .app .people-simple .people-empty h2{font-size:21px;font-weight:600;line-height:1.4;margin:0}
+:root #root .app .people-simple .people-empty p{font-size:14px;line-height:1.6;max-width:44ch;color:var(--spenton-muted);margin:0}
+:root #root .app .people-simple .people-detail{display:grid;gap:16px;padding:0 0 20px;border:0;border-bottom:1px solid var(--spenton-border);background:transparent;border-radius:0;scroll-margin-top:20px}
+:root #root .app .people-simple .people-detail>.text-button,:root #root .app .people-simple .people-history-intro>.text-button{justify-self:start;font-size:13px;min-height:40px}
+:root #root .app .people-simple .people-person-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,auto);gap:32px;align-items:center;min-width:0}
+:root #root .app .people-simple .people-detail-identity{display:flex;gap:16px;align-items:center;min-width:0}
+:root #root .app .people-simple .people-detail-identity>.person-avatar{width:52px;height:52px;font-size:22px;flex:none}
+:root #root .app .people-simple .people-detail-identity>div{min-width:0}
+:root #root .app .people-simple .people-detail-identity h2{font-size:27px;line-height:1.3;letter-spacing:-.7px;margin:0;font-weight:600;overflow-wrap:anywhere}
+:root #root .app .people-simple .people-detail-identity p{font-size:13px;line-height:1.6;color:var(--spenton-muted);margin:5px 0 0;overflow-wrap:anywhere}
+:root #root .app .people-simple .people-detail-totals{display:grid;gap:10px;min-width:0}
+:root #root .app .people-simple .people-detail-totals .person-amounts{display:grid;padding:0;border:0;flex:none}
+:root #root .app .people-simple .people-detail-totals strong{font-size:23px}
+:root #root .app .people-simple .people-person-hint{font-size:13px;line-height:1.6;color:var(--spenton-muted);margin:0}
+:root #root .app .people-simple .people-history-intro{display:grid;gap:8px}
+:root #root .app .people-simple .people-history-intro h2{font-size:25px;line-height:1.3;letter-spacing:-.5px;margin:0}
+:root #root .app .people-simple .people-history-intro p{font-size:12px;color:var(--spenton-muted);margin:0}
+:root #root .app .people-simple .people-history{display:block;min-width:0;padding:0;border:0;border-radius:0;background:transparent}
+:root #root .app .people-simple .people-bills-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+:root #root .app .people-simple .people-bills-heading h3{font-size:17px;line-height:1.5;font-weight:600;margin:0}
+:root #root .app .people-simple .people-bills-heading p{font-size:12px;line-height:1.6;color:var(--spenton-muted);margin:4px 0 0}
+:root #root .app .people-simple .people-bills-heading>.text-button{font-size:12px;min-height:40px}
+:root #root .app .people-simple .shared-card{display:block;padding:0;margin:0;border:1px solid var(--spenton-border);border-top:0;border-radius:0;background:var(--spenton-surface);box-shadow:none;min-width:0}
+:root #root .app .people-simple .shared-card:first-of-type{border-top:1px solid var(--spenton-border);border-radius:14px 14px 0 0}
+:root #root .app .people-simple .shared-card:last-of-type{border-radius:0 0 14px 14px}
+:root #root .app .people-simple .shared-card:only-of-type{border-radius:14px}
+:root #root .app .people-simple .shared-bill-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(160px,auto) 200px;align-items:center;gap:24px;padding:20px;min-width:0}
+:root #root .app .people-simple .shared-bill-toggle{display:flex;align-items:center;gap:12px;min-width:0;width:100%;padding:0;border:0;background:transparent;text-align:left;color:var(--spenton-ink)}
+:root #root .app .people-simple .shared-bill-icon{display:grid;place-items:center;width:36px;height:36px;flex:none;background:var(--spenton-raised);color:var(--spenton-positive);border-radius:9px}
+:root #root .app .people-simple .shared-bill-toggle>span:nth-child(2){min-width:0;flex:1}
+:root #root .app .people-simple .shared-bill-toggle strong{display:block;font-size:15px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
+:root #root .app .people-simple .shared-bill-toggle small{display:block;font-size:12px;line-height:1.6;color:var(--spenton-muted);margin-top:4px;overflow-wrap:anywhere}
+:root #root .app .people-simple .shared-bill-toggle>svg{flex:none;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-bill-toggle[aria-expanded=true]>svg{transform:rotate(180deg)}
+:root #root .app .people-simple .shared-bill-balance{display:grid;gap:4px;text-align:right;min-width:0}
+:root #root .app .people-simple .shared-bill-balance>span{font-size:12px;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-bill-balance strong{font-size:18px;line-height:1.4;font-weight:600;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+:root #root .app .people-simple .shared-bill-balance small{font-size:11px;font-weight:400;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-quick-action{width:100%;max-width:224px;justify-self:stretch}
+:root #root .app .people-simple .shared-bill-details{display:grid;gap:16px;margin:0 20px;padding:20px 0;border-top:1px solid var(--spenton-border)}
+:root #root .app .people-simple .shared-bill-details[hidden]{display:none}
+:root #root .app .people-simple .shared-bill-facts{display:flex;align-items:center;justify-content:space-between;gap:16px}
+:root #root .app .people-simple .shared-bill-total{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;min-width:0}
+:root #root .app .people-simple .shared-bill-total>span{font-size:12px;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-bill-total>strong{font-size:15px;font-variant-numeric:tabular-nums}
+:root #root .app .people-simple :is(.shared-group-link,.shared-receipt){font-size:13px;min-height:40px;justify-self:start}
+:root #root .app .people-simple .shared-share{display:grid;gap:16px;min-width:0;padding:16px 0 0;border:0;border-top:1px solid var(--spenton-border);background:transparent;border-radius:0}
+:root #root .app .people-simple .shared-person-heading{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:center;gap:12px;min-width:0}
+:root #root .app .people-simple .shared-person-heading>.person-avatar{width:32px;height:32px;font-size:15px}
+:root #root .app .people-simple .shared-person-heading>div{display:grid;gap:4px;min-width:0}
+:root #root .app .people-simple .shared-balance-label{font-size:13px;color:var(--spenton-muted);line-height:1.5;overflow-wrap:anywhere}
+:root #root .app .people-simple .shared-balance{font-size:23px;line-height:1.3;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+:root #root .app .people-simple .shared-balance small{font-size:11px;font-weight:400;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-closed{font-size:16px;font-weight:600;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-person-status{text-align:right;justify-items:end}
+:root #root .app .people-simple .shared-person-status>span{font-size:12px;line-height:1.5;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-status{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-status>svg{width:14px;height:14px;flex:none}
+:root #root .app .people-simple .shared-share-description{font-size:13px;line-height:1.6;color:var(--spenton-muted);margin:0}
+:root #root .app .people-simple .repayment-breakdown dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:16px}
+:root #root .app .people-simple .repayment-breakdown dl>div{display:grid;gap:6px;padding:0;background:transparent;border:0}
+:root #root .app .people-simple .repayment-breakdown dt{font-size:12px;line-height:1.5;color:var(--spenton-muted)}
+:root #root .app .people-simple .repayment-breakdown dd{font-size:15px;line-height:1.5;margin:0;font-variant-numeric:tabular-nums}
+:root #root .app .people-simple .shared-share-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+:root #root .app .people-simple .shared-share-actions .text-button{font-size:13px;min-height:44px}
+:root #root .app .people-simple .shared-payment{display:grid;gap:8px;padding:16px 0;border:0;border-top:1px solid var(--spenton-border)}
+:root #root .app .people-simple .shared-payment.needs-action{border:0;border-left:3px solid var(--spenton-focus);padding:8px 16px;border-radius:0;background:transparent}
+:root #root .app .people-simple .shared-payment-label{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 16px}
+:root #root .app .people-simple .shared-payment-label strong{font-size:14px}
+:root #root .app .people-simple .shared-payment-label span{font-size:12px;color:var(--spenton-muted)}
+:root #root .app .people-simple .shared-payment p{font-size:13px;line-height:1.6;margin:0}
+:root #root .app .people-simple :is(.shared-payment-history,.shared-bill-actions){font-size:13px;color:var(--spenton-muted)}
+:root #root .app .people-simple :is(.shared-payment-history,.shared-bill-actions)>summary{display:flex;align-items:center;gap:8px;cursor:pointer;min-height:40px;color:var(--spenton-ink)}
+:root #root .app .people-simple .shared-payment-history>summary::before{content:'+';font-size:18px}
+:root #root .app .people-simple .shared-payment-history[open]>summary::before{content:'−'}
+:root #root .app .people-simple .shared-bill-actions{padding-top:8px;border-top:1px solid var(--spenton-border)}
+:root #root .app .people-simple .shared-bill-actions .button-row{padding-top:8px;gap:16px}
+:root #root .app .people-simple .shared-bill-actions .text-button{font-size:13px;min-height:40px}
+:root #root .app .people-simple .shared-bill-actions p{font-size:12px;line-height:1.6;color:var(--spenton-muted)}
+:root #root .app .people-simple :is(.people-bills-empty,.people-load-history){margin-top:20px;font-size:13px}
+:root #root .app .people-simple .people-bills-empty h3{font-size:18px;margin:0 0 8px}
+:root #root .app .people-simple :is(.people-bills-empty,.people-load-history) p{font-size:13px;line-height:1.6;color:var(--spenton-muted);margin:0 0 12px}
+:root #root .app .people-simple .people-budget-context{margin-top:20px;font-size:13px}
+:root #root .app .people-simple .people-total-help{font-size:12px;line-height:1.6;color:var(--spenton-muted);max-width:78ch}
+:root #root .app .people-simple .people-total-help>summary{display:flex;align-items:center;gap:8px;min-height:40px;cursor:pointer;color:var(--spenton-muted)}
+:root #root .app .people-simple .people-total-help p{font-size:13px;line-height:1.7;margin:8px 0 0}
+:root #root .app .people-simple .people-footnote{font-size:12px;color:var(--spenton-muted);margin:0;padding-top:4px}
+:root #root .app .people-simple .people-feedback{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--spenton-border);border-radius:9px;color:var(--spenton-ink);background:var(--spenton-selected);font-size:13px}
+.people-feedback>span{flex:1}.people-feedback>svg{color:var(--spenton-positive);flex:none}
+.sharing-message{margin:0;padding:16px 20px;border-left:3px solid var(--spenton-focus);background:var(--spenton-raised);font-size:14px;line-height:1.7;overflow-wrap:anywhere}
+.repayment-recipient{margin:0;font-size:15px}
+#root .modal.people-dialog>.modal-header{padding:var(--dialog-inset);gap:16px;align-items:start}
+#root .modal.people-dialog>.people-simple{padding:0 var(--dialog-inset) var(--dialog-inset)}
+#root .people-dialog .people-simple>.people-intro{display:none}
+#root .people-dialog .repayment-amount{font-size:30px;line-height:1.3;font-weight:650;font-variant-numeric:tabular-nums}
+#root .modal.people-dialog.budget-switch-dialog{width:560px}
+#root .people-dialog .repayment-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:0 0 20px;border-bottom:1px solid var(--spenton-border)}
+#root .people-dialog .repayment-summary h3{font-size:18px;line-height:1.4;margin:0 0 6px;overflow-wrap:anywhere}
+#root .people-dialog .repayment-summary .repayment-recipient{font-size:13px;line-height:1.6;margin:0;color:var(--spenton-muted);overflow-wrap:anywhere}
+#root .people-dialog .repayment-summary .repayment-amount{min-width:0;max-width:100%;overflow-wrap:anywhere;text-align:right}
+#root .people-dialog .shared-budget-route p{font-size:14px;line-height:1.7;margin:0;color:var(--spenton-ink);overflow-wrap:anywhere}
+#root .people-dialog .shared-current-budget{display:block;margin-top:8px;color:var(--spenton-muted)}
+#root .people-dialog .people-editor-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--spenton-border)}
+#root .people-dialog .people-editor-actions>.button{width:auto;min-height:44px;flex:0 1 auto}
+@media(hover:hover){
+ :root #root .app .people-simple .people-person-card:hover{background:var(--spenton-hover)}
+ :root #root .app .people-simple .people-balance-link:hover{text-decoration:underline;text-underline-offset:4px}
+ :root #root .app .people-simple .shared-bill-toggle:hover strong{text-decoration:underline;text-underline-offset:3px}
+}
+:root #root .app .people-simple .people-person-card:focus-visible{outline-offset:-4px}
+:root #root .app .people-simple :is(h2,h3)[tabindex='-1']:focus{outline:none}
+@media(max-width:1000px){
+ :root #root .app .people-simple .people-filter-tools{flex-basis:100%;justify-content:start}
+ :root #root .app .people-simple .people-search-wrap{max-width:none}
+ :root #root .app .people-simple .shared-bill-summary{grid-template-columns:minmax(0,1fr) auto;gap:16px}
+ :root #root .app .people-simple .shared-quick-action{grid-column:1/-1;justify-self:start;width:auto;margin-left:48px}
+}
+@media(max-width:760px){
+ :root #root .app .people-simple{gap:16px}
+ :root #root .app .people-simple .shared-content{gap:16px}
+ :root #root .app .people-simple .people-intro{flex-wrap:wrap;gap:16px}
+ :root #root .app .people-simple .people-intro h1{font-size:28px}
+ :root #root .app .people-simple .people-intro p{font-size:13px}
+ :root #root .app .people-simple .people-money-columns{gap:16px}
+ :root #root .app .people-simple .people-money-section+div{padding-left:16px}
+ :root #root .app .people-simple .people-money-values{display:grid;gap:8px}
+ :root #root .app .people-simple .people-balance-link{font-size:20px;flex-wrap:wrap;gap:2px 4px;justify-content:start}
+ :root #root .app .people-simple .people-balance-link>svg{display:none}
+ :root #root .app .people-simple .people-zero{font-size:18px}
+ :root #root .app .people-simple .people-review-queue>header{flex-wrap:wrap;gap:4px}
+ :root #root .app .people-simple .people-review-row{grid-template-columns:32px minmax(0,1fr);gap:12px;padding:16px}
+ :root #root .app .people-simple .people-review-row>.person-avatar{width:32px;height:32px}
+ :root #root .app .people-simple .people-review-row>.button{grid-column:2;justify-self:start;max-width:100%}
+ :root #root .app .people-simple .people-section-heading{flex-wrap:wrap;gap:4px}
+ :root #root .app .people-simple .people-filters{width:100%;justify-content:space-between;gap:0}
+ :root #root .app .people-simple .people-filters>button{font-size:12px;padding:8px;min-height:44px}
+ :root #root .app .people-simple .people-filter-tools{flex-wrap:wrap}
+ :root #root .app .people-simple .people-filter-tools>.spenton-select{flex:1 1 144px;width:auto}
+ :root #root .app .people-simple .people-search-wrap{flex:1 1 180px;min-width:0}
+ :root #root .app .people-simple .people-person-card{grid-template-columns:36px minmax(0,1fr) 16px;gap:12px;padding:16px}
+ :root #root .app .people-simple .people-person-card>.person-avatar{width:36px;height:36px;grid-row:1}
+ :root #root .app .people-simple .people-person-name{grid-row:1}
+ :root #root .app .people-simple .people-person-name strong{font-size:16px}
+ :root #root .app .people-simple .people-row-amounts{grid-column:2;grid-row:2}
+ :root #root .app .people-simple .person-chevron{grid-column:3;grid-row:1/3;align-self:center}
+ :root #root .app .people-simple .person-amount-line{flex-wrap:wrap;gap:2px 8px}
+ :root #root .app .people-simple .person-amount-line strong{font-size:17px;text-align:left}
+ :root #root .app .people-simple .people-person-summary{grid-template-columns:minmax(0,1fr);gap:20px}
+ :root #root .app .people-simple .people-detail-totals{max-width:100%}
+ :root #root .app .people-simple .people-detail-totals .person-amount-line{justify-content:space-between}
+ :root #root .app .people-simple .people-detail-totals strong{font-size:21px}
+ :root #root .app .people-simple .people-bills-heading{flex-wrap:wrap;gap:8px}
+ :root #root .app .people-simple .shared-bill-summary{grid-template-columns:minmax(0,1fr);gap:12px;padding:16px}
+ :root #root .app .people-simple .shared-bill-toggle{gap:10px}
+ :root #root .app .people-simple .shared-bill-balance{margin-left:46px;text-align:left}
+ :root #root .app .people-simple .shared-quick-action{grid-column:1;margin-left:46px;justify-self:stretch;max-width:100%}
+ :root #root .app .people-simple .shared-bill-details{margin:0 16px;padding:16px 0}
+ :root #root .app .people-simple .shared-bill-facts{flex-wrap:wrap}
+ :root #root .app .people-simple .shared-person-heading{grid-template-columns:32px minmax(0,1fr)}
+ :root #root .app .people-simple .shared-person-status{grid-column:2;justify-items:start;text-align:left}
+ :root #root .app .people-simple .shared-payment-label{display:grid;gap:4px}
+}
+@media(max-width:440px){
+ #root .people-dialog .repayment-summary{grid-template-columns:minmax(0,1fr);gap:12px}
+ #root .people-dialog .repayment-summary .repayment-amount{text-align:left}
+ #root .people-dialog .people-editor-actions>.button{flex:1 1 100%}
+}
+@media(pointer:coarse){:root #root .app .people-simple :is(.people-sections>button,.people-filters>button,.people-total-help>summary){min-height:44px}}

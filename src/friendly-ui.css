@@ -1,0 +1,107 @@
+/* Shared forms follow the same visual language as setup and transactions. */
+.modal.modal-standard{width:640px;max-width:calc(100vw - 32px);max-height:calc(100dvh - 48px);padding:0;border:1px solid #dbe3d3;border-radius:24px;background:#fffef9;box-shadow:0 24px 90px #243b3430;overflow:hidden}
+.modal.modal-standard.modal-wide{width:880px}
+.modal-standard[open]{display:flex;flex-direction:column}
+.modal-standard>.modal-header{flex:none;display:flex;align-items:center;gap:16px;padding:25px 28px 22px;background:linear-gradient(110deg,#f0f5e6,#fff7e9);border-bottom:1px solid #e3e8d9}
+.modal-standard .modal-header>div{flex:1;min-width:0}
+.modal-standard .modal-header .eyebrow{font-size:10px;letter-spacing:1.2px;line-height:1.6;color:#627658}
+.modal-standard .modal-header h2{margin-top:7px;font-size:29px;line-height:1.2;color:#304f3d;letter-spacing:-.7px}
+.modal-standard .modal-pip{width:62px;height:62px;object-fit:contain;flex:none;transform:rotate(7deg)}
+.modal-standard .modal-header>.icon-button{align-self:flex-start;width:34px;height:34px;background:#ffffffb0;border-radius:50%;color:#53644c}
+.modal-standard>form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.modal-standard .form-body{padding:25px 28px;gap:21px;overflow-y:auto;overscroll-behavior:contain;min-height:0}
+.modal-standard .modal-footer{flex:none;padding:18px 28px;background:#f6f7ee;border-top:1px solid #e1e7d9;gap:10px}
+.modal-standard .button{min-height:43px;padding:11px 17px;border-radius:12px;font-size:13px;line-height:1.4}
+.modal-standard .field>span{font-size:13px;color:#3b523c;font-weight:650;line-height:1.5}
+.modal-standard .field input:not([type=checkbox]),.modal-standard .field select,.modal-standard .field textarea{min-height:47px;font-size:15px;padding:12px 13px;border:1px solid #ccd7c4;border-radius:11px;background-color:#fffefa;color:#344637;line-height:1.4;min-width:0}
+.modal-standard .field input:focus,.modal-standard .field select:focus,.modal-standard .field textarea:focus{outline:3px solid #b9d39f55;border-color:#789965}
+.modal-standard .field small,.modal-standard .muted,.modal-standard .hint p{font-size:13px;line-height:1.65;color:#62715c}
+.modal-standard .hint{background:#edf4e4;border:1px solid #dce7cf;border-radius:13px;padding:14px}
+.modal-standard .hint>svg{color:#6d8859;flex:none}
+.modal-standard .amount-input.large{background:#f1f5e8;border-radius:15px;padding:10px 15px;border:1px solid #dce6cc}
+.modal-standard .amount-input.large>input{background:transparent;border:0;font-size:34px!important}
+.modal-standard .amount-input>span{font-size:12px;color:#667854}
+.modal-standard .plan-row{padding:14px 0;gap:12px}
+.modal-standard .plan-row strong{font-size:13px}
+.modal-standard .plan-row small{font-size:11px;line-height:1.5}
+.modal-standard .plan-row input{font-size:15px;min-height:42px;border-radius:9px;width:110px;max-width:35%}
+.modal-standard .help-content>p,.modal-standard .help-content section p{font-size:14px;line-height:1.7}
+.modal-standard .help-content h3,.modal-standard .settings-section h3{font-size:16px}
+.modal-standard .starter-categories label{font-size:13px;padding:12px;line-height:1.5}
+.modal-standard .starter-categories small{font-size:11px;color:#68765e}
+.modal-standard .starter-categories legend,.modal-standard .icon-picker legend{font-size:13px}
+.modal-standard .form-error{font-size:13px;line-height:1.6}
+.modal-standard .field-row>*{min-width:0}
+.modal-standard .recurring-row{flex-wrap:wrap;gap:12px}
+.modal-standard .recurring-row .field-row{flex-wrap:wrap}
+.app .sidebar{padding-top:22px;padding-bottom:12px}
+.app .workspace-switch{margin:20px 0}
+.app .workspace-switch strong{font-size:12px}
+.app .workspace-switch small{font-size:11px;color:#6c7965}
+.app .sidebar nav{gap:4px;margin-top:9px}
+.app .sidebar .nav-heading{font-size:10px;color:#727f68}
+.app .sidebar .nav-item{font-size:13px;min-height:42px}
+.app .sidebar-account-heading{margin-top:19px;margin-bottom:6px}
+.app .sidebar-accounts{min-height:64px;gap:3px}
+.app .sidebar-account{flex-shrink:0}
+.app .sidebar-account>span:last-child{min-width:0}
+.app .sidebar-account strong{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app .sidebar-account small{font-size:12px}
+.app .sidebar-bottom{padding-top:0;margin-top:10px}
+.app .local-card{margin:0 0 7px;padding:10px 12px;border-radius:13px}
+.app .local-card small{font-size:11px;color:#69765f;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app .local-card button{font-size:12px;min-height:31px;margin-top:3px}
+.app .sidebar-bottom .nav-item.subtle{font-size:12px;min-height:36px;padding:8px 12px}
+.app .page-heading p{font-size:13px;line-height:1.7;color:#697461}
+.app .account-overview,.app .insight-summary{border-radius:18px}
+.app .account-overview span,.app .insight-summary span{font-size:11px;letter-spacing:.7px;color:#627357}
+.app .account-tile{border-radius:18px;background:#fffef8;border-color:#dce5d2;padding:25px}
+.app .account-tile.savings{background:#faf7ed}
+.app .account-tile h3{font-size:19px;color:#36503d}
+.app .account-type{font-size:10px;color:#6d7b61;letter-spacing:1px}
+.app .account-digits,.app .account-tile>.small{font-size:12px;color:#6a7761}
+.app .account-tile .button{font-size:13px;min-height:42px;border-radius:11px}
+.app .add-account-tile{border-radius:18px}
+.app .add-account-tile strong{font-size:16px}
+.app .add-account-tile small,.app .privacy-note p{font-size:12px;line-height:1.7}
+@media(max-width:1000px){.budget-layout.with-detail>.context-column{grid-row:2}}
+@media(max-height:740px){.app .sidebar{overflow-y:auto}.app .sidebar-accounts{flex:none;max-height:170px;min-height:64px}.app .sidebar-bottom{margin-top:auto;padding-top:12px}}
+@media(max-width:520px){
+ .modal.modal-standard{max-width:calc(100vw - 20px);max-height:calc(100dvh - 24px);border-radius:19px}
+ .modal-standard>.modal-header{padding:19px 18px;gap:9px}
+ .modal-standard .modal-header h2{font-size:24px}
+ .modal-standard .modal-header .eyebrow{font-size:9px;letter-spacing:.8px}
+ .modal-standard .modal-pip{width:42px;height:48px}
+ .modal-standard .form-body{padding:20px 18px;gap:18px}
+ .modal-standard .modal-footer{padding:14px 18px}
+ .modal-standard .field input:not([type=checkbox]),.modal-standard .field select,.modal-standard .field textarea{font-size:16px}
+ .modal-standard .field-row{flex-wrap:wrap}
+ .modal-standard .field-row>.field{flex:1 1 180px}
+ .modal-standard .button{padding:10px 13px;font-size:12px}
+ .modal-standard .amount-input.large>input{font-size:29px!important}
+ .modal-standard .starter-categories fieldset>div{grid-template-columns:1fr}
+ .app .account-tile{padding:22px}
+ .app .account-overview span,.app .insight-summary span{font-size:10px}
+}
+body:has(dialog.modal-standard[open]){overflow:hidden}
+@media(max-width:520px){.modal-standard .field-row{grid-template-columns:minmax(0,1fr)}}
+
+/* Category creation stays visible without opening a group or detail panel. */
+.app .category-setup-tools{justify-content:flex-start;flex-wrap:wrap;padding:14px;margin-bottom:17px;gap:12px 18px;background:#f0f5e7;border:1px solid #dce6ce;border-radius:15px}
+.app .category-setup-tools .add-category-button{min-height:44px;padding:12px 17px;font-size:14px;border-radius:11px;white-space:nowrap}
+.app .category-setup-tools .text-button{font-size:12px;min-height:36px;color:#516c41}
+@media(max-width:520px){.app .category-setup-tools{padding:12px;gap:8px 14px}.app .category-setup-tools .add-category-button{width:100%;justify-content:center}.app .category-setup-tools .text-button{font-size:11px}}
+
+.inline-plan-draft{min-width:0;padding:5px 0}
+.inline-plan-draft>small{display:block;margin-top:5px;max-width:180px;white-space:normal;color:#a14e38;font-size:11px;line-height:1.5;text-align:left}
+.inline-plan-input[aria-invalid=true]{border-color:#b45d43;background:#fff6ef}
+
+/* A single account menu leaves the sidebar focused on the budget. */
+.space-menu{position:relative;flex-shrink:0;margin-bottom:18px}.space-menu .workspace-switch{margin-bottom:0;cursor:pointer;list-style:none}.space-menu summary::-webkit-details-marker{display:none}.space-menu-panel{position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:90;border:1px solid #d9dfd2;background:#fffef9;border-radius:14px;padding:8px;box-shadow:0 12px 30px #293d2826}.space-menu-panel>small{display:block;padding:8px 9px;color:#65735d;overflow-wrap:anywhere;font-size:12px}.space-menu-panel button{display:flex;width:100%;align-items:center;justify-content:space-between;flex-wrap:wrap;text-align:left;background:none;border:0;border-radius:8px;padding:10px 9px;font-size:13px;color:#314b38;cursor:pointer}.space-menu-panel button:hover,.space-menu-panel button:focus-visible{background:#eaf0e2}.space-menu-panel button small{width:100%;font-size:11px;color:#6b775f;margin-top:4px}.app .sidebar-bottom{border-top:1px solid #dfe5d7;padding-top:10px}.app .sidebar-bottom .nav-item{min-height:36px}
+
+.savings-goal-preview,.category-goal-empty{padding:16px;border-radius:14px;background:#f0f4e7;color:#405b39;display:grid;gap:8px}
+.savings-goal-preview>span{font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.savings-goal-preview>strong{font-size:21px;line-height:1.35;letter-spacing:-.4px}
+.savings-goal-preview p,.category-goal-empty p{font-size:13px;line-height:1.6;margin:0}
+.savings-goal-preview small{font-size:12px;line-height:1.5;color:#627458}
+.category-goal-empty{margin:16px 0}.category-goal-empty>.text-button{justify-self:start}

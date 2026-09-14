@@ -1,0 +1,4 @@
+.account-dot.investment{background:#a08fbb}
+.account-tile.investment .account-symbol{background:#eee9f3;color:#78688f}
+.investment-budget-note{padding:12px 14px;border:1px solid #e3dfea;border-radius:10px;background:#f7f4fa;color:#665b73;font-size:12px;line-height:1.6;margin:16px 0}
+.account-tile.investment>.text-button{display:flex;gap:7px;min-height:32px;margin-top:10px}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup and budgeting questions
+    url: https://www.reddit.com/r/Spenton/
+    about: Ask the community for help. Use fictional examples.
+  - name: Private security report
+    url: https://github.com/aliacollins/spenton-community/security/advisories/new
+    about: Report suspected vulnerabilities privately, not in an issue.

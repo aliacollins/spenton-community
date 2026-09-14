@@ -1,0 +1,57 @@
+name: spenton
+services:
+  app:
+    image: spenton-self-hosted:${SPENTON_RELEASE:-local}
+    build:
+      context: ..
+      dockerfile: self-hosted/Dockerfile
+      args:
+        SOURCE_COMMIT: ${SPENTON_SOURCE_COMMIT:-}
+    command: ["node", "server/self-hosted-entry.mjs"]
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8787"
+    environment:
+      SPENTON_LOCAL_ACCOUNTS: "1"
+      SPENTON_LOCAL_HTTP: "1"
+      SPENTON_SECURE_COOKIES: "0"
+      SPENTON_ALLOWED_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+      SPENTON_ALLOW_REGISTRATION: "1"
+      SPENTON_RESEND_ENABLED: "0"
+      SPENTON_BACKUP_URL: http://backups:8790
+    volumes:
+      - data:/data
+      - settings:/settings
+    networks:
+      - frontend
+      - backup
+    depends_on:
+      backups:
+        condition: service_healthy
+  backups:
+    image: spenton-self-hosted:${SPENTON_RELEASE:-local}
+    build:
+      context: ..
+      dockerfile: self-hosted/Dockerfile
+      args:
+        SOURCE_COMMIT: ${SPENTON_SOURCE_COMMIT:-}
+    command: ["node", "server/self-hosted-entry.mjs", "backups"]
+    restart: unless-stopped
+    volumes:
+      - backups:/backups
+      - settings:/settings
+    networks:
+      - backup
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8790/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+networks:
+  frontend:
+  backup:
+    internal: true
+volumes:
+  data:
+  backups:
+  settings:

@@ -1,0 +1,88 @@
+/* Shared form controls follow system appearance even outside Pip view. */
+:root{
+ --editor-surface:var(--spenton-surface);
+ --editor-field:var(--spenton-field);
+ --editor-soft:var(--spenton-raised);
+ --editor-hover:var(--spenton-hover);
+ --editor-selected:var(--spenton-selected);
+ --editor-ink:var(--spenton-ink);
+ --editor-muted:var(--spenton-muted);
+ --editor-line:var(--spenton-control-border);
+ --editor-accent:var(--spenton-focus);
+}
+#root .modal .category-editor-fields{display:grid;gap:24px;min-width:0}
+#root .modal .category-identity-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+#root .modal .category-appearance-fields{display:grid;gap:16px;padding-top:20px;border-top:1px solid var(--editor-line)}
+#root .modal .category-appearance-fields h3{font-size:16px;line-height:1.5;color:var(--editor-ink);margin:0}
+#root .modal .category-editor-fields .field>span{font-size:13px;color:var(--editor-ink)}
+#root .modal .category-editor-fields .field>small{font-size:12px;line-height:1.5;color:var(--editor-muted)}
+#root .modal .category-editor-fields .icon-picker{margin:0}
+#root .modal .category-goal-settings{border:1px solid var(--editor-line);border-radius:12px;background:var(--editor-surface);min-width:0}
+#root .modal .category-goal-settings>summary{display:flex;align-items:center;gap:12px;min-height:64px;padding:16px;list-style:none;cursor:pointer;border-radius:12px;color:var(--editor-ink)}
+#root .modal .category-goal-settings>summary::-webkit-details-marker{display:none}
+#root .modal .category-goal-settings>summary>span{display:grid;gap:4px;flex:1;min-width:0}
+#root .modal .category-goal-settings>summary strong{font-size:14px;color:var(--editor-ink)}
+#root .modal .category-goal-settings>summary small{font-size:12px;color:var(--editor-muted);line-height:1.5}
+#root .modal .category-goal-settings>summary>svg{flex:none;color:var(--editor-accent)}
+#root .modal .category-goal-settings[open]>summary{border-bottom:1px solid var(--editor-line);border-radius:12px 12px 0 0}
+#root .modal .category-goal-settings[open]>summary>svg:last-child{transform:rotate(180deg)}
+#root .modal .category-goal-content{padding:20px 16px}
+
+/* The outer wrapper and its input must share a background and text color. */
+#root .modal .spenton-payee-control{background:var(--editor-field);border-color:var(--editor-line);color:var(--editor-ink)}
+#root .modal .spenton-payee-control:focus-within{background:var(--editor-field);border-color:var(--editor-accent)}
+#root .modal .spenton-payee-control>.spenton-payee-browse{color:var(--editor-muted)}
+#root .modal :is(.spenton-select-trigger,.date-picker-field){background:var(--editor-field);border-color:var(--editor-line);color:var(--editor-ink)}
+#root .modal .date-picker-field:focus-within{border-color:var(--editor-accent)}
+#root .modal .date-picker-popover{background:var(--spenton-popover);border-color:var(--editor-line);color:var(--editor-ink)}
+#root .modal .date-picker-popover :is(.date-picker-heading,.date-picker-week,.date-picker-footer){color:var(--editor-muted);border-color:var(--editor-line)}
+#root .modal .date-picker-popover :is(.date-picker-heading span,.date-picker-footer>span){color:var(--editor-muted)}
+#root .modal .date-picker-grid button{color:var(--editor-ink)}
+#root .modal .date-picker-grid .outside-month{color:var(--editor-muted)}
+#root .modal .date-picker-grid button[aria-pressed=true]{background:var(--spenton-primary);color:var(--spenton-on-primary)}
+#root .modal .date-picker-grid button[aria-pressed=true]::after{background:currentColor}
+#root .modal .date-picker-popover :is(.date-picker-heading>button,.date-picker-footer>button){background:var(--editor-soft);color:var(--editor-ink)}
+#root .modal .goal-fields .amount-input{background:var(--editor-soft);border:1px solid var(--editor-line);border-radius:12px;padding:8px 16px;gap:12px;color:var(--editor-ink)}
+#root .modal .goal-fields .amount-input>input{background:transparent!important;box-shadow:none!important;border:0!important;color:var(--editor-ink);padding:8px 0;font-size:30px;line-height:1.4;min-width:0;width:100%}
+#root .modal .goal-fields .amount-input:focus-within{border-color:var(--editor-accent)}
+#root .modal .goal-fields .amount-input>span{color:var(--editor-muted);font-size:12px}
+#root .modal :is(.goal-label,.icon-picker legend){color:var(--editor-ink);font-size:13px}
+#root .modal .goal-kind button{background:var(--editor-soft);border-color:var(--editor-line);color:var(--editor-ink);min-height:64px}
+#root .modal .goal-kind strong{color:var(--editor-ink);font-size:14px}
+#root .modal .goal-kind small{color:var(--editor-muted);font-size:12px}
+#root .modal .goal-kind button[aria-pressed=true]{background:var(--editor-selected);border-color:var(--editor-accent)}
+#root .modal .goal-timeline-choice{background:var(--editor-soft);border:1px solid var(--editor-line)}
+#root .modal .goal-timeline-choice button{color:var(--editor-ink);font-size:13px}
+#root .modal .goal-timeline-choice button[aria-pressed=true]{background:var(--editor-selected);color:var(--editor-ink);box-shadow:none}
+#root .modal :is(.goal-kind,.goal-timeline-choice)[data-pip-motion-group]>button[aria-pressed=true]{background:transparent}
+#root .modal .goal-preview{background:var(--editor-selected);border-color:var(--editor-line)}
+#root .modal .goal-preview>strong,#root .modal .goal-preview-facts b{color:var(--editor-ink)}
+#root .modal :is(.goal-preview>span,.goal-preview-facts small,.goal-timing-note,.goal-options,.goal-save-note){color:var(--editor-muted);font-size:12px}
+#root .modal .goal-options summary{color:var(--editor-ink)}
+#root .modal .goal-options .check-label{font-size:13px}
+
+/* Selection and keyboard focus remain visible without white icon tiles. */
+#root .modal .icon-picker>div{gap:8px}
+#root .modal .icon-picker button{min-height:44px;background:var(--editor-field);color:var(--editor-ink);border:1px solid var(--editor-line)}
+#root .modal .icon-picker button .category-icon{background:transparent}
+.category-color-swatch>i{width:12px;height:12px;border-radius:50%;background:currentColor}
+#root .modal .icon-picker button[aria-pressed=true]{background:var(--editor-selected);border-color:var(--editor-accent);box-shadow:inset 0 0 0 1px var(--editor-accent)}
+#root .modal :is(.icon-picker button,.goal-kind button,.goal-timeline-choice button,.category-goal-settings>summary):focus-visible{outline:2px solid var(--editor-accent);outline-offset:3px}
+@media(hover:hover){
+ #root .modal :is(.icon-picker button,.goal-kind button,.goal-timeline-choice button):hover:not(:disabled):not([aria-pressed=true]){background:var(--editor-hover);border-color:var(--editor-accent);color:var(--editor-ink)}
+ #root .modal .category-goal-settings>summary:hover{background:var(--editor-hover)}
+ #root .modal .spenton-payee-browse:hover{background:var(--editor-hover)}
+ #root .modal .spenton-select-trigger:hover:not(:disabled){background:var(--editor-hover);border-color:var(--editor-accent);color:var(--editor-ink)}
+ #root .modal .date-picker-popover button:hover:not(:disabled):not([aria-pressed=true]){background:var(--editor-hover);color:var(--editor-ink)}
+}
+@media(max-width:540px){
+ #root .modal .category-identity-fields{grid-template-columns:minmax(0,1fr)}
+ #root .modal .category-goal-content{padding:16px 12px}
+ #root .modal .goal-timing{grid-template-columns:minmax(0,1fr);gap:16px}
+ #root .modal .goal-kind{grid-template-columns:minmax(0,1fr)}
+ #root .modal .goal-kind button{min-height:56px;padding:12px;gap:4px}
+ #root .modal .goal-kind strong{font-size:14px}
+ #root .modal .goal-kind small{font-size:12px}
+ #root .modal .goal-timing-note{margin-top:0}
+ #root .modal .goal-fields .amount-input{padding-inline:12px}
+}

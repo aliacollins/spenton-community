@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://spenton.dev/api",
+      "service-desc": [
+        {
+          "href": "https://spenton.dev/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://spenton.dev/api-docs.md",
+          "type": "text/markdown"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://spenton.dev/api/health",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/* Draw the close icon independently of font metrics, centered in its button. */
+#spenton-cookie-banner button.so-cookie-close{position:relative;font-size:0;line-height:0}
+#spenton-cookie-banner button.so-cookie-close::before,
+#spenton-cookie-banner button.so-cookie-close::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;border-radius:2px;background:currentColor;pointer-events:none}
+#spenton-cookie-banner button.so-cookie-close::before{transform:translate(-50%,-50%) rotate(45deg)}
+#spenton-cookie-banner button.so-cookie-close::after{transform:translate(-50%,-50%) rotate(-45deg)}
+#spenton-cookie-banner[role="dialog"][hidden]{display:none!important}

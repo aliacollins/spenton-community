@@ -1,0 +1,9 @@
+.reconcile-summary{gap:20px;flex-wrap:wrap}
+.reconcile-summary>span{font-size:13px;line-height:1.5}
+.reconcile-summary strong{font-size:16px;font-variant-numeric:tabular-nums}
+
+ #root .reconcile-summary{background:var(--spenton-raised);color:var(--spenton-muted)}
+ #root .reconcile-summary strong{color:var(--spenton-ink)}
+ #root .reconcile-entry{border-color:var(--spenton-border);color:var(--spenton-ink)}
+ #root .reconcile-entry small{color:var(--spenton-muted)}
+ #root .reconciliation-history{border-color:var(--spenton-border);color:var(--spenton-muted)}
